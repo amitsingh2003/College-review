@@ -141,8 +141,8 @@ const Navbar = () => {
           className={`max-w-6xl mx-auto rounded-2xl backdrop-blur-3xl transition-all duration-700 ease-out
             ${
               isScrolled
-                ? "bg-white/15 shadow-[inset_0_2px_4px_rgba(255,255,255,0.3),inset_0_-2px_4px_rgba(255,255,255,0.1),0_8px_32px_rgba(0,0,0,0.12)] border border-white/20"
-                : "bg-white/5 shadow-[inset_0_1px_2px_rgba(255,255,255,0.2)] border-transparent"
+                ? "bg-white/15 shadow-[inset_0_2px_4px_rgba(255,255,255,0.3),inset_0_-2px_4px_rgba(255,255,255,0.1),0_8px_32px_rgba(0,0,0,0.12)] border border-white/20 "
+                : "bg-white/2 shadow-[inset_0_1px_2px_rgba(255,255,255,0.2)] border-transparent"
             }`}
         >
           <div className="px-4 lg:px-6">
@@ -151,8 +151,8 @@ const Navbar = () => {
               <div className="flex items-center flex-shrink-0 group">
                 <div className="flex items-center space-x-3">
                   <span
-                    className={`text-lg lg:text-xl font-bold transition-all duration-500 ${
-                      isScrolled ? "text-gray-800" : "text-white"
+                    className={`text-lg lg:text-xl font-extrabold transition-all duration-500  ${
+                      isScrolled ? "text-blue-500" : "text-white"
                     }`}
                   >
                     SCS GLOBAL
@@ -170,10 +170,12 @@ const Navbar = () => {
                 >
                   <button
                     className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 rounded-full transition-all duration-300 hover:bg-white/8 ${
-                      isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white/90 hover:text-white"
+                      isScrolled
+                        ? "text-blue-500 hover:text-blue-700"
+                        : "text-white/90 hover:text-white"
                     }`}
                   >
-                    <span>Explore Programs</span>
+                    <span className="font-extrabold">Explore Programs</span>
                     <ChevronDown
                       className={`w-4 h-4 transition-all duration-300 ${
                         exploreDropdown ? "rotate-180" : ""
@@ -328,8 +330,8 @@ const Navbar = () => {
                         hover:shadow-[inset_0_2px_6px_rgba(0,0,0,0.15),inset_0_-1px_2px_rgba(255,255,255,0.3)] 
                         focus:shadow-[inset_0_3px_8px_rgba(0,0,0,0.2),inset_0_-1px_2px_rgba(255,255,255,0.4)] 
                         focus:scale-[1.02] ${
-                          isScrolled 
-                            ? "bg-white/40 text-gray-900 placeholder-gray-500" 
+                          isScrolled
+                            ? "bg-white/40 text-gray-900 placeholder-gray-500"
                             : "bg-white/10 text-white placeholder-white/60"
                         }`}
                     />
@@ -344,11 +346,13 @@ const Navbar = () => {
                 >
                   <button
                     className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 rounded-full transition-all duration-300 hover:bg-white/8 ${
-                      isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white/90 hover:text-white"
+                      isScrolled
+                        ? "text-blue-500 hover:text-blue-700"
+                        : "text-white/90 hover:text-white"
                     }`}
                   >
-                    <Grid3X3 className="w-4 h-4" />
-                    <span>Discover</span>
+                    <Grid3X3 className="w-4 h-4 font-bold" />
+                    <span className="font-extrabold">Discover</span>
                   </button>
 
                   {discoverDropdown && (
@@ -390,10 +394,12 @@ const Navbar = () => {
               <div className="hidden lg:flex items-center">
                 <button
                   className={`text-sm font-medium px-4 py-2 rounded-full transition-all duration-300 hover:bg-white/8 ${
-                    isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white/90 hover:text-white"
+                    isScrolled
+                      ? "text-blue-500 hover:text-blue-700"
+                      : "text-white/90 hover:text-white"
                   }`}
                 >
-                  Need Counselling?
+                 <span className="font-extrabold">Need Counselling?</span>
                 </button>
               </div>
 

@@ -130,7 +130,7 @@ const EducationPrograms = () => {
       avgFees: "$45K",
       scholarships: "68%",
       image:
-        "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400&h=300&fit=crop",
+        "https://i.pinimg.com/736x/66/5a/a8/665aa802d6c721448061d2e9c58a31fc.jpg",
       description: "Top universities & research opportunities",
       gradient: "from-red-500 to-blue-600",
     },
@@ -293,7 +293,7 @@ const EducationPrograms = () => {
                   onClick={() => setActiveProgram(program)}
                   className={`flex-shrink-0 px-4 sm:px-6 py-2 sm:py-3 rounded-2xl font-semibold transition-all duration-500 text-sm sm:text-base ${
                     activeProgram === program
-                      ? "bg-gray-100 text-gray-800 shadow-[inset_8px_8px_16px_#bebebe,inset_-8px_-8px_16px_#ffffff] transform scale-95"
+                      ? "bg-gray-100 text-blue-800 shadow-[inset_8px_8px_16px_#bebebe,inset_-8px_-8px_16px_#ffffff] transform scale-95"
                       : "bg-gray-100 text-gray-600 shadow-[6px_6px_12px_#bebebe,-6px_-6px_12px_#ffffff] hover:shadow-[8px_8px_16px_#a8a8a8,-8px_-8px_16px_#ffffff] hover:scale-105 hover:text-gray-800"
                   }`}
                   style={{ userSelect: "none" }}
@@ -415,7 +415,7 @@ const EducationPrograms = () => {
                   hover:shadow-[inset_8px_8px_16px_#bebebe,inset_-8px_-8px_16px_#ffffff]
                   active:shadow-[inset_12px_12px_24px_#a8a8a8,inset_-12px_-12px_24px_#ffffff]"
                 >
-                  <BookOpen className="w-4 h-4" />
+                  <BookOpen className="w-4 h-4 text-blue-500" />
                   Explore All Colleges
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
@@ -512,7 +512,7 @@ const EducationPrograms = () => {
                   hover:shadow-[inset_8px_8px_16px_#bebebe,inset_-8px_-8px_16px_#ffffff]
                   active:shadow-[inset_12px_12px_24px_#a8a8a8,inset_-12px_-12px_24px_#ffffff]"
                 >
-                  <Target className="w-4 h-4" />
+                  <Target className="w-4 h-4 text-blue-500" />
                   View All Exams
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
@@ -573,9 +573,14 @@ const EducationPrograms = () => {
                       hover:shadow-[inset_12px_12px_24px_#a8a8a8,inset_-12px_-12px_24px_#ffffff]"
                     >
                       <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-                        <div className="text-2xl sm:text-3xl flex-shrink-0">
-                          {country.flag}
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0">
+                          <img
+                            src={country.image}
+                            alt={country.country}
+                            className="w-full h-full rounded-full object-cover"
+                          />
                         </div>
+
                         <div className="min-w-0 flex-1">
                           <h4 className="font-semibold text-gray-800 text-sm sm:text-base truncate">
                             {country.country}
@@ -606,7 +611,7 @@ const EducationPrograms = () => {
                   hover:shadow-[inset_8px_8px_16px_#bebebe,inset_-8px_-8px_16px_#ffffff]
                   active:shadow-[inset_12px_12px_24px_#a8a8a8,inset_-12px_-12px_24px_#ffffff]"
                 >
-                  <Globe className="w-4 h-4" />
+                  <Globe className="w-4 h-4 text-blue-500" />
                   Explore Study Abroad
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                 </button>

@@ -309,7 +309,7 @@ const StreamsDegreeExplorer = () => {
 
   const DegreeCard = ({ degree, index }) => (
     <div
-      className={`group min-w-80 sm:min-w-96 bg-gray-100 rounded-3xl overflow-hidden transition-all duration-700 transform hover:scale-105 ${
+      className={`group min-w-80 sm:min-w-96 bg-gray-100 rounded-3xl overflow-hidden transition-all duration-700 transform hover:scale-101 ${
         index === 0 ? "ml-4 sm:ml-0" : ""
       } ${index === degreeData.length - 1 ? "mr-4 sm:mr-0" : ""} 
     shadow-[inset_-12px_-8px_40px_#d9d9d9,inset_12px_8px_40px_#ffffff] 
@@ -356,7 +356,7 @@ const StreamsDegreeExplorer = () => {
               className="w-8 h-8 rounded-xl bg-gray-100 flex items-center justify-center
               shadow-[inset_4px_4px_8px_#c5c5c5,inset_-4px_-4px_8px_#ffffff]"
             >
-              <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600" />
+              <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600" />
             </div>
             <span className="text-xs sm:text-sm font-medium text-gray-700">
               Available Locations
@@ -384,8 +384,8 @@ const StreamsDegreeExplorer = () => {
           active:shadow-[inset_12px_12px_24px_#a8a8a8,inset_-12px_-12px_24px_#ffffff]
           transition-all duration-300 flex items-center justify-center gap-2 font-semibold text-sm sm:text-base"
         >
-          <BookOpen className="w-3 h-3 sm:w-4 sm:h-4" />
-          <span>Explore {degree.title} Colleges</span>
+          <BookOpen className="w-3 h-3 sm:w-4 sm:h-4 text-blue-500" />
+          <span >Explore {degree.title} Colleges</span>
           <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover/btn:translate-x-1 transition-transform" />
         </button>
       </div>
@@ -458,7 +458,7 @@ const StreamsDegreeExplorer = () => {
             className="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-3 sm:px-4 py-2 rounded-2xl text-xs sm:text-sm font-medium mb-4
             shadow-[inset_6px_6px_12px_#d1d1d1,inset_-6px_-6px_12px_#ffffff]"
           >
-            <GraduationCap className="w-3 h-3 sm:w-4 sm:h-4" />
+            <GraduationCap className="w-3 h-3 sm:w-4 sm:h-4 text-blue-500" />
             Educational Excellence
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 px-4">
@@ -481,7 +481,7 @@ const StreamsDegreeExplorer = () => {
               onClick={() => setActiveTab("streams")}
               className={`px-4 sm:px-8 py-2 sm:py-3 rounded-2xl font-semibold transition-all duration-500 flex items-center gap-2 text-sm sm:text-base ${
                 activeTab === "streams"
-                  ? "bg-gray-100 text-gray-800 shadow-[8px_8px_16px_#bebebe,-8px_-8px_16px_#ffffff] transform scale-95"
+                  ? "bg-gray-100 text-blue-800 shadow-[8px_8px_16px_#bebebe,-8px_-8px_16px_#ffffff] transform scale-95"
                   : "text-gray-600 hover:text-gray-800 hover:shadow-[4px_4px_8px_#d1d1d1,-4px_-4px_8px_#ffffff] hover:scale-105"
               }`}
             >
@@ -492,7 +492,7 @@ const StreamsDegreeExplorer = () => {
               onClick={() => setActiveTab("degree")}
               className={`px-4 sm:px-8 py-2 sm:py-3 rounded-2xl font-semibold transition-all duration-500 flex items-center gap-2 text-sm sm:text-base ${
                 activeTab === "degree"
-                  ? "bg-gray-100 text-gray-800 shadow-[8px_8px_16px_#bebebe,-8px_-8px_16px_#ffffff] transform scale-95"
+                  ? "bg-gray-100 text-blue-800 shadow-[8px_8px_16px_#bebebe,-8px_-8px_16px_#ffffff] transform scale-95"
                   : "text-gray-600 hover:text-gray-800 hover:shadow-[4px_4px_8px_#d1d1d1,-4px_-4px_8px_#ffffff] hover:scale-105"
               }`}
             >
@@ -506,20 +506,10 @@ const StreamsDegreeExplorer = () => {
           <>
             {/* Neomorphic Category Navigation */}
             <div className="mb-8 sm:mb-12">
-              <div className="flex items-center justify-center gap-2 sm:gap-4">
-                <button
-                  onClick={() => scroll(categoryScrollRef, "left")}
-                  className="p-2 sm:p-3 bg-gray-100 hover:bg-gray-100 rounded-2xl transition-all duration-300 flex-shrink-0
-                    shadow-[6px_6px_12px_#bebebe,-6px_-6px_12px_#ffffff]
-                    hover:shadow-[inset_6px_6px_12px_#bebebe,inset_-6px_-6px_12px_#ffffff]
-                    active:shadow-[inset_8px_8px_16px_#a8a8a8,inset_-8px_-8px_16px_#ffffff]"
-                >
-                  <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
-                </button>
-
+              <div className="flex items-center justify-center gap-2 sm:gap-4 border-none">
                 <div
                   ref={categoryScrollRef}
-                  className="flex gap-2 sm:gap-3 overflow-x-auto scrollbar-hide max-w-full cursor-grab active:cursor-grabbing"
+                  className="flex gap-2 sm:gap-3 overflow-x-auto scrollbar-hide max-w-full cursor-grab active:cursor-grabbing border-none"
                   style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                   onMouseDown={(e) => handleMouseDown(e, categoryScrollRef)}
                   onMouseMove={(e) => handleMouseMove(e, categoryScrollRef)}
@@ -533,9 +523,9 @@ const StreamsDegreeExplorer = () => {
                     <button
                       key={index}
                       onClick={() => scrollToCategory(index)}
-                      className={`px-4 sm:px-6 py-2 sm:py-3 rounded-2xl whitespace-nowrap font-medium transition-all duration-500 text-sm sm:text-base flex-shrink-0 ${
+                      className={`px-4 sm:px-6 py-2 sm:py-3 rounded-2xl whitespace-nowrap border-none font-medium transition-all duration-500 text-sm sm:text-base flex-shrink-0 ${
                         index === activeCategory
-                          ? "bg-gray-100 text-gray-800 shadow-[inset_8px_8px_16px_#bebebe,inset_-8px_-8px_16px_#ffffff] transform scale-95"
+                          ? "bg-gray-100 text-blue-800 shadow-[inset_8px_8px_16px_#bebebe,inset_-8px_-8px_16px_#ffffff] transform scale-95 "
                           : "bg-gray-100 text-gray-600 shadow-[6px_6px_12px_#bebebe,-6px_-6px_12px_#ffffff] hover:shadow-[8px_8px_16px_#a8a8a8,-8px_-8px_16px_#ffffff] hover:scale-105 hover:text-gray-800"
                       }`}
                     >
@@ -543,31 +533,13 @@ const StreamsDegreeExplorer = () => {
                     </button>
                   ))}
                 </div>
-
-                <button
-                  onClick={() => scroll(categoryScrollRef, "right")}
-                  className="p-2 sm:p-3 bg-gray-100 hover:bg-gray-100 rounded-2xl transition-all duration-300 flex-shrink-0
-                    shadow-[6px_6px_12px_#bebebe,-6px_-6px_12px_#ffffff]
-                    hover:shadow-[inset_6px_6px_12px_#bebebe,inset_-6px_-6px_12px_#ffffff]
-                    active:shadow-[inset_8px_8px_16px_#a8a8a8,inset_-8px_-8px_16px_#ffffff]"
-                >
-                  <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
-                </button>
               </div>
             </div>
 
             {/* Degree Cards */}
             <div className="relative">
               <div className="flex items-center justify-center gap-2 sm:gap-4">
-                <button
-                  onClick={() => scroll(degreeScrollRef, "left")}
-                  className="hidden sm:block p-3 sm:p-4 bg-gray-100 hover:bg-gray-100 rounded-2xl transition-all duration-300 z-10 flex-shrink-0
-                    shadow-[8px_8px_16px_#bebebe,-8px_-8px_16px_#ffffff]
-                    hover:shadow-[inset_8px_8px_16px_#bebebe,inset_-8px_-8px_16px_#ffffff]
-                    active:shadow-[inset_12px_12px_24px_#a8a8a8,inset_-12px_-12px_24px_#ffffff]"
-                >
-                  <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
-                </button>
+             
 
                 <div
                   ref={degreeScrollRef}
@@ -586,15 +558,7 @@ const StreamsDegreeExplorer = () => {
                   ))}
                 </div>
 
-                <button
-                  onClick={() => scroll(degreeScrollRef, "right")}
-                  className="hidden sm:block p-3 sm:p-4 bg-gray-100 hover:bg-gray-100 rounded-2xl transition-all duration-300 z-10 flex-shrink-0
-                    shadow-[8px_8px_16px_#bebebe,-8px_-8px_16px_#ffffff]
-                    hover:shadow-[inset_8px_8px_16px_#bebebe,inset_-8px_-8px_16px_#ffffff]
-                    active:shadow-[inset_12px_12px_24px_#a8a8a8,inset_-12px_-12px_24px_#ffffff]"
-                >
-                  <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
-                </button>
+               
               </div>
             </div>
           </>
@@ -603,16 +567,6 @@ const StreamsDegreeExplorer = () => {
         {activeTab === "streams" && (
           <div className="relative">
             <div className="flex items-start justify-center gap-2 sm:gap-4">
-              <button
-                onClick={() => scroll(streamsScrollRef, "left")}
-                className="hidden lg:block sticky top-6 p-3 sm:p-4 bg-gray-100 hover:bg-gray-100 rounded-2xl transition-all duration-300 z-10 mt-4 flex-shrink-0
-                  shadow-[8px_8px_16px_#bebebe,-8px_-8px_16px_#ffffff]
-                  hover:shadow-[inset_8px_8px_16px_#bebebe,inset_-8px_-8px_16px_#ffffff]
-                  active:shadow-[inset_12px_12px_24px_#a8a8a8,inset_-12px_-12px_24px_#ffffff]"
-              >
-                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
-              </button>
-
               <div
                 ref={streamsScrollRef}
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-full pb-4 cursor-grab active:cursor-grabbing"
@@ -622,16 +576,6 @@ const StreamsDegreeExplorer = () => {
                   <StreamCard key={index} stream={stream} index={index} />
                 ))}
               </div>
-
-              <button
-                onClick={() => scroll(streamsScrollRef, "right")}
-                className="hidden lg:block sticky top-6 p-3 sm:p-4 bg-gray-100 hover:bg-gray-100 rounded-2xl transition-all duration-300 z-10 mt-4 flex-shrink-0
-                  shadow-[8px_8px_16px_#bebebe,-8px_-8px_16px_#ffffff]
-                  hover:shadow-[inset_8px_8px_16px_#bebebe,inset_-8px_-8px_16px_#ffffff]
-                  active:shadow-[inset_12px_12px_24px_#a8a8a8,inset_-12px_-12px_24px_#ffffff]"
-              >
-                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
-              </button>
             </div>
           </div>
         )}

@@ -149,9 +149,8 @@ const NeomorphicFooter = () => {
             {/* Neomorphic Brand Container */}
             <div className="bg-white/20 backdrop-blur-xl rounded-3xl lg:rounded-[3rem] p-8 lg:p-12 shadow-[20px_20px_60px_#d1d9e6,-20px_-20px_60px_#ffffff] border border-white/30 mb-12">
               <div className="flex items-center justify-center gap-4 mb-6">
-                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl shadow-[8px_8px_16px_#c3c9d6,-8px_-8px_16px_#ffffff] flex items-center justify-center transform hover:scale-110 transition-all duration-500">
-                  <BookOpen className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
-                </div>
+               
+               
                 <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
                   SCS Educational Consultancy
                 </h1>
@@ -175,7 +174,7 @@ const NeomorphicFooter = () => {
                 {Object.entries(footerData).map(([category, links]) => (
                   <div key={category} className="space-y-4">
                     <div className="bg-white/50 backdrop-blur-lg rounded-2xl p-4 shadow-[8px_8px_16px_#c8d2e0,-8px_-8px_16px_#ffffff] border border-white/30">
-                      <h3 className="text-lg font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-4">
+                      <h3 className="text-lg font-bold bg-gradient-to-r from-blue-800 to-violet-600 bg-clip-text text-transparent mb-4">
                         {category}
                       </h3>
                       <ul className="space-y-2">

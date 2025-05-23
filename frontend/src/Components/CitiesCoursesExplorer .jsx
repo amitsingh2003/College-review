@@ -34,7 +34,7 @@ const EnhancedEducationalExplorer = () => {
       popular: true,
       rank: "#1",
       imageUrl:
-        "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=400&h=280&fit=crop&auto=format&q=80",
+        "https://i.pinimg.com/736x/09/ca/88/09ca881b5d86fa27a24c9bc3558706f0.jpg",
       description: "Tech hub with world-class institutions",
     },
     {
@@ -45,7 +45,7 @@ const EnhancedEducationalExplorer = () => {
       popular: true,
       rank: "#2",
       imageUrl:
-        "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400&h=280&fit=crop&auto=format&q=80",
+        "https://i.pinimg.com/736x/56/7a/75/567a7525c99771d33fc9deb3cb2f1baf.jpg",
       description: "Rich cultural heritage & education",
     },
     {
@@ -56,7 +56,7 @@ const EnhancedEducationalExplorer = () => {
       popular: false,
       rank: "#3",
       imageUrl:
-        "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&h=280&fit=crop&auto=format&q=80",
+        "https://i.pinimg.com/736x/85/b7/97/85b797117c2060e63f0735a740900e77.jpg",
       description: "Business & engineering excellence",
     },
     {
@@ -67,7 +67,7 @@ const EnhancedEducationalExplorer = () => {
       popular: true,
       rank: "#4",
       imageUrl:
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=280&fit=crop&auto=format&q=80",
+        "https://i.pinimg.com/736x/80/c3/fe/80c3fee03082a4180bcb7d46f69b5eee.jpg",
       description: "Modern corporate education hub",
     },
     {
@@ -78,7 +78,7 @@ const EnhancedEducationalExplorer = () => {
       popular: false,
       rank: "#5",
       imageUrl:
-        "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=280&fit=crop&auto=format&q=80",
+        "https://i.pinimg.com/736x/5e/27/f3/5e27f3486ab906c7c9d406711f80f7e0.jpg",
       description: "Peaceful learning environment",
     },
     {
@@ -89,7 +89,7 @@ const EnhancedEducationalExplorer = () => {
       popular: true,
       rank: "#6",
       imageUrl:
-        "https://images.unsplash.com/photo-1567307967587-5fb406ecec41?w=400&h=280&fit=crop&auto=format&q=80",
+        "https://i.pinimg.com/736x/62/9f/4d/629f4d660dab55451932e55fdd768971.jpg",
       description: "Premier educational destination",
     },
     {
@@ -100,7 +100,7 @@ const EnhancedEducationalExplorer = () => {
       popular: false,
       rank: "#7",
       imageUrl:
-        "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=400&h=280&fit=crop&auto=format&q=80",
+        "https://i.pinimg.com/736x/80/7e/c3/807ec32e3de48bb3b61e79e6f12e6c30.jpg",
       description: "Royal heritage meets modern education",
     },
     {
@@ -111,7 +111,7 @@ const EnhancedEducationalExplorer = () => {
       popular: true,
       rank: "#8",
       imageUrl:
-        "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=280&fit=crop&auto=format&q=80",
+        "https://i.pinimg.com/736x/2e/50/4f/2e504f15504dd8ae85928bd66b3a97c4.jpg",
       description: "India's educational powerhouse",
     },
   ];
