@@ -385,7 +385,7 @@ const StreamsDegreeExplorer = () => {
           transition-all duration-300 flex items-center justify-center gap-2 font-semibold text-sm sm:text-base"
         >
           <BookOpen className="w-3 h-3 sm:w-4 sm:h-4 text-blue-500" />
-          <span >Explore {degree.title} Colleges</span>
+          <span>Explore {degree.title} Colleges</span>
           <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover/btn:translate-x-1 transition-transform" />
         </button>
       </div>
@@ -455,18 +455,23 @@ const StreamsDegreeExplorer = () => {
         {/* Neomorphic Header */}
         <div className="text-center mb-8 sm:mb-12">
           <div
-            className="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-3 sm:px-4 py-2 rounded-2xl text-xs sm:text-sm font-medium mb-4
-            shadow-[inset_6px_6px_12px_#d1d1d1,inset_-6px_-6px_12px_#ffffff]"
+            className="inline-block bg-gradient-to-br from-[#f7fafd] via-[#f0f4f8] to-[#ffffff] rounded-full px-3 py-2
+  shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.9),inset_3px_3px_6px_rgba(0,0,0,0.4),8px_8px_18px_rgba(0,0,0,0.5),-4px_-4px_15px_rgba(255,255,255,0.85)]
+  border-[1.5px] border-white/70 backdrop-blur-xl relative overflow-hidden transition-transform duration-300 hover:scale-105 max-w-max mx-auto mb-4"
           >
-            <GraduationCap className="w-3 h-3 sm:w-4 sm:h-4 text-blue-500" />
-            Educational Excellence
+            {/* Realistic Water Droplet Glare */}
+            <div className="absolute top-1 left-3 w-4 h-1.5 bg-white/70 rounded-full blur-md opacity-90 rotate-[15deg]"></div>
+            <div className="absolute top-0.5 right-3 w-2.5 h-1 bg-white/80 rounded-full blur-sm opacity-75 rotate-[20deg]"></div>
+
+            {/* Heading */}
+            <h1 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2 px-3 tracking-tight relative z-10">
+              Explore{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_4px_6px_rgba(0,0,0,0.4)]">
+                Streams & Degrees
+              </span>
+            </h1>
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 px-4">
-            Explore{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Streams & Degrees
-            </span>
-          </h1>
+
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto mb-6 sm:mb-8 px-4">
             Discover the perfect educational path from our extensive collection
             of programs and institutions
@@ -539,8 +544,6 @@ const StreamsDegreeExplorer = () => {
             {/* Degree Cards */}
             <div className="relative">
               <div className="flex items-center justify-center gap-2 sm:gap-4">
-             
-
                 <div
                   ref={degreeScrollRef}
                   className="flex gap-4 sm:gap-8 overflow-x-auto pb-4 max-w-full cursor-grab active:cursor-grabbing scrollbar-hide"
@@ -557,8 +560,6 @@ const StreamsDegreeExplorer = () => {
                     <DegreeCard key={index} degree={degree} index={index} />
                   ))}
                 </div>
-
-               
               </div>
             </div>
           </>

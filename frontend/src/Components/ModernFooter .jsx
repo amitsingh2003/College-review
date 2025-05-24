@@ -149,8 +149,6 @@ const NeomorphicFooter = () => {
             {/* Neomorphic Brand Container */}
             <div className="bg-white/20 backdrop-blur-xl rounded-3xl lg:rounded-[3rem] p-8 lg:p-12 shadow-[20px_20px_60px_#d1d9e6,-20px_-20px_60px_#ffffff] border border-white/30 mb-12">
               <div className="flex items-center justify-center gap-4 mb-6">
-               
-               
                 <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
                   SCS Educational Consultancy
                 </h1>
@@ -170,33 +168,32 @@ const NeomorphicFooter = () => {
             {/* Glassmorphic Content Container */}
             <div className="bg-white/30 backdrop-blur-2xl rounded-3xl lg:rounded-[3rem] p-8 lg:p-12 shadow-[25px_25px_50px_#c8d2e0,-25px_-25px_50px_#ffffff] border border-white/40">
               {/* Links Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
-                {Object.entries(footerData).map(([category, links]) => (
-                  <div key={category} className="space-y-4">
-                    <div className="bg-white/50 backdrop-blur-lg rounded-2xl p-4 shadow-[8px_8px_16px_#c8d2e0,-8px_-8px_16px_#ffffff] border border-white/30">
-                      <h3 className="text-lg font-bold bg-gradient-to-r from-blue-800 to-violet-600 bg-clip-text text-transparent mb-4">
-                        {category}
-                      </h3>
-                      <ul className="space-y-2">
-                        {links.map((link, index) => (
-                          <li key={index}>
-                            <a
-                              href="#"
-                              className="text-gray-600 hover:text-blue-600 transition-all duration-300 flex items-center group text-sm lg:text-base font-medium"
-                            >
-                              <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all duration-300 mr-2 transform -translate-x-2 group-hover:translate-x-0 text-blue-600" />
-                              <span className="group-hover:translate-x-1 transition-transform duration-300 group-hover:font-semibold">
-                                {link}
-                              </span>
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
+             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
+  {Object.entries(footerData).map(([category, links]) => (
+    <div key={category} className="space-y-4">
+      <div className="bg-white/30 backdrop-blur-lg rounded-2xl p-4 shadow-[16px_16px_32px_#8a9fb8,-16px_-16px_32px_#ffffff] border border-white/20">
+        <h3 className="text-lg font-bold bg-gradient-to-r from-blue-800 to-violet-600 bg-clip-text text-transparent mb-4">
+          {category}
+        </h3>
+        <ul className="space-y-2">
+          {links.map((link, index) => (
+            <li key={index}>
+              <a
+                href="#"
+                className="text-gray-600 hover:text-blue-600 transition-all duration-300 flex items-center group text-sm lg:text-base font-medium"
+              >
+                <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all duration-300 mr-2 transform -translate-x-2 group-hover:translate-x-0 text-blue-600" />
+                <span className="group-hover:translate-x-1 transition-transform duration-300 group-hover:font-semibold">
+                  {link}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  ))}
+</div>
               {/* Contact Information */}
               <div className="bg-gradient-to-r from-white/40 to-blue-50/40 backdrop-blur-xl rounded-3xl p-8 lg:p-10 mb-12 shadow-[inset_10px_10px_20px_#d1d9e6,inset_-10px_-10px_20px_#ffffff] border border-white/40">
                 <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-gray-800 to-blue-600 bg-clip-text text-transparent mb-8 text-center">

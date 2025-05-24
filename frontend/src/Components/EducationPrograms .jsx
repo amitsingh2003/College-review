@@ -230,21 +230,24 @@ const EducationPrograms = () => {
       {/* Neomorphic Header */}
       <div className="pt-12 sm:pt-16 pb-6 sm:pb-8 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <div
-            className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-4 sm:px-6 py-2 sm:py-3 bg-gray-100 rounded-2xl sm:rounded-3xl
-            shadow-[inset_6px_6px_12px_#d1d1d1,inset_-6px_-6px_12px_#ffffff]"
-          >
-            <Award className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500" />
-            <span className="text-xs sm:text-sm font-semibold text-gray-700">
-              Premium Education Platform
-            </span>
-          </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-3 sm:mb-4 tracking-tight px-4">
-            Explore{" "}
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 bg-clip-text text-transparent">
-              Programs
-            </span>
-          </h1>
+       
+         <div className="inline-block bg-gradient-to-br from-[#f7fafd] via-[#f0f4f8] to-[#ffffff] rounded-full px-4 py-2
+  shadow-[inset_-2px_-2px_6px_rgba(255,255,255,0.85),inset_3px_3px_6px_rgba(0,0,0,0.3),10px_10px_20px_rgba(0,0,0,0.35),-4px_-4px_15px_rgba(255,255,255,0.75)]
+  border-[1.5px] border-white/60 backdrop-blur-xl relative overflow-hidden transition-all duration-300 hover:scale-105 max-w-max mx-auto mb-4">
+
+  {/* Highlight Glare Effects */}
+  <div className="absolute top-1 left-3 w-4 h-1.5 bg-white/60 rounded-full blur-md opacity-80 rotate-[15deg]"></div>
+  <div className="absolute top-0.5 right-3 w-3 h-1.5 bg-white/80 rounded-full blur-sm opacity-65 rotate-[20deg]"></div>
+
+  {/* Heading */}
+  <h1 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2 tracking-tight relative z-10 px-2">
+    Explore{" "}
+    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,0.3)]">
+      Programs
+    </span>
+  </h1>
+</div>
+
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed px-4">
             Discover your perfect educational journey with world-class programs
           </p>

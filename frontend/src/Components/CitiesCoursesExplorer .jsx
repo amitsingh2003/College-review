@@ -116,8 +116,6 @@ const EnhancedEducationalExplorer = () => {
     },
   ];
 
- 
-
   // Touch/Mouse handlers for horizontal scrolling
   const handleStart = (e, section) => {
     const x = e.type === "mousedown" ? e.pageX : e.touches[0].clientX;
@@ -214,17 +212,28 @@ const EnhancedEducationalExplorer = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-100 via-blue-50 to-purple-50 p-4 lg:p-8 overflow-hidden">
       <div className="max-w-7xl mx-auto space-y-16 lg:space-y-20">
-       
-
         {/* Top Cities Section */}
         <div className="space-y-8">
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Top Cities to Study
-              </span>
-            </h2>
-            <p className="text-gray-600 text-base lg:text-lg xl:text-xl">
+          <div className="text-center space-y-6">
+            <div
+              className="inline-block bg-gradient-to-br from-[#f7fafd] via-[#f0f4f8] to-[#ffffff] rounded-full px-10 py-5 
+    shadow-[inset_-3px_-3px_7px_rgba(255,255,255,0.9),inset_4px_4px_7px_rgba(0,0,0,0.12),14px_14px_30px_rgba(0,0,0,0.25),-6px_-6px_25px_rgba(255,255,255,0.9)] 
+    border-[1.5px] border-white/50 backdrop-blur-xl relative overflow-hidden transition-all duration-300 hover:scale-105"
+            >
+              {/* Highlight Glare Effects */}
+              <div className="absolute top-1.5 left-4 w-7 h-3 bg-white/50 rounded-full blur-md opacity-80 rotate-[15deg]"></div>
+              <div className="absolute top-1 right-5 w-3.5 h-2 bg-white/70 rounded-full blur-sm opacity-60 rotate-[20deg]"></div>
+
+              {/* Title */}
+              <h2 className="text-xl lg:text-2xl font-bold relative z-10">
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,0.25)]">
+                  Top Cities to Study
+                </span>
+              </h2>
+            </div>
+
+            {/* Description */}
+            <p className="text-gray-600 text-base lg:text-lg xl:text-xl leading-relaxed">
               Explore premier educational destinations across India
             </p>
           </div>
@@ -320,8 +329,6 @@ const EnhancedEducationalExplorer = () => {
             </div>
           </div>
         </div>
-
-       
       </div>
 
       <style jsx>{`

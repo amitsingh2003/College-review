@@ -138,9 +138,22 @@ const StudyAbroad = () => {
       {/* Header */}
       <div className="pt-16 pb-8 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-6xl font-bold text-gray-800 mb-4 tracking-tight">
-            Study <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Abroad</span>
-          </h1>
+        <div className="inline-block bg-gradient-to-br from-[#f7fafd] via-[#f0f4f8] to-[#ffffff] rounded-full px-6 py-3
+  shadow-[inset_-3px_-3px_7px_rgba(255,255,255,0.85),inset_4px_4px_7px_rgba(0,0,0,0.25),16px_16px_30px_rgba(0,0,0,0.4),-6px_-6px_20px_rgba(255,255,255,0.75)]
+  border-[1.5px] border-white/60 backdrop-blur-xl relative overflow-hidden transition-all duration-300 hover:scale-105 max-w-max mx-auto mb-6">
+
+  {/* Highlight Glare Effects */}
+  <div className="absolute top-1.5 left-3 w-5 h-2 bg-white/60 rounded-full blur-md opacity-80 rotate-[15deg]"></div>
+  <div className="absolute top-1 right-4 w-3.5 h-2 bg-white/80 rounded-full blur-sm opacity-65 rotate-[20deg]"></div>
+
+  {/* Heading */}
+  <h1 className="text-3xl font-bold text-gray-800 relative z-10 tracking-tight">
+    Study <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_4px_8px_rgba(0,0,0,0.35)]">
+      Abroad
+    </span>
+  </h1>
+</div>
+
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Discover world-class education opportunities and transform your future with international experience
           </p>
