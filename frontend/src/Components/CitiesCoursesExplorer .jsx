@@ -210,7 +210,9 @@ const EnhancedEducationalExplorer = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 via-blue-50 to-purple-50 p-4 lg:p-8 overflow-hidden">
+    <div className="min-h-screen bg-gray-100 p-4 lg:p-8 overflow-hidden" style={{
+        background: "linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%)",
+      }}>
       <div className="max-w-7xl mx-auto space-y-16 lg:space-y-20">
         {/* Top Cities Section */}
         <div className="space-y-8">

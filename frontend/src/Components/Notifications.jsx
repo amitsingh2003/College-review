@@ -140,7 +140,9 @@ const Notifications = () => {
   };
 
   return (
-    <section className="relative bg-slate-200 py-16 overflow-hidden">
+    <section className="relative bg-gray-100 py-16 overflow-hidden"  style={{
+        background: "linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%)",
+      }}>
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div

@@ -150,8 +150,13 @@ const Navbar = () => {
               {/* Logo */}
               <div className="flex items-center flex-shrink-0 group">
                 <div className="flex items-center space-x-3">
+                  <img
+                    src="/src/assets/logo.png"
+                    alt="SCS Global Logo"
+                    className="h-8 w-auto lg:h-10 transition-all duration-500"
+                  />
                   <span
-                    className={`text-lg lg:text-xl font-extrabold transition-all duration-500  ${
+                    className={`text-lg lg:text-xl font-extrabold transition-all duration-500 ${
                       isScrolled ? "text-blue-500" : "text-white"
                     }`}
                   >
@@ -163,13 +168,14 @@ const Navbar = () => {
               {/* Desktop Navigation */}
               <div className="hidden lg:flex items-center space-x-6 flex-1 justify-center">
                 {/* Explore Dropdown */}
+                {/* Explore Dropdown */}
                 <div
                   className="relative group"
                   onMouseEnter={() => setExploreDropdown(true)}
                   onMouseLeave={() => setExploreDropdown(false)}
                 >
                   <button
-                    className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 rounded-full transition-all duration-300 hover:bg-white/8 ${
+                    className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 rounded-full transition-all duration-300 hover:bg-white/10 ${
                       isScrolled
                         ? "text-blue-500 hover:text-blue-700"
                         : "text-white/90 hover:text-white"
@@ -177,134 +183,221 @@ const Navbar = () => {
                   >
                     <span className="font-extrabold">Explore Programs</span>
                     <ChevronDown
-                      className={`w-4 h-4 transition-all duration-300 ${
+                      className={`w-4 h-4 transition-transform duration-300 ${
                         exploreDropdown ? "rotate-180" : ""
                       }`}
                     />
                   </button>
 
-                  {exploreDropdown && (
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 w-screen max-w-4xl">
-                      <div className="bg-white/95 backdrop-blur-2xl rounded-2xl shadow-2xl border border-white/30 p-6 animate-in slide-in-from-top-5 duration-300">
-                        <div className="grid grid-cols-8 gap-6">
-                          {/* Categories */}
-                          <div className="col-span-2">
-                            <div className="flex items-center gap-2 mb-4">
-                              <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-                              <h3 className="font-bold text-gray-800 text-xs uppercase tracking-wider">
-                                Programs
-                              </h3>
-                            </div>
-                            <div className="space-y-1">
-                              {exploreOptions.map((option, index) => (
-                                <div
-                                  key={index}
-                                  className="group/item flex items-center space-x-2 p-2.5 hover:bg-blue-50 rounded-lg cursor-pointer transition-all duration-300"
-                                >
-                                  <div
-                                    className={`w-6 h-6 bg-gradient-to-r ${option.color} rounded-lg flex items-center justify-center text-white shadow-md`}
-                                  >
-                                    {option.icon}
-                                  </div>
-                                  <span className="text-xs font-medium text-gray-700 group-hover/item:text-blue-600 transition-colors">
-                                    {option.name}
-                                  </span>
+                  {/* Dropdown */}
+                  <div className="absolute top-full left-0 mt-3 w-[850px] z-50">
+                    {exploreDropdown && (
+                      <div className="relative">
+                        <div
+                          className="backdrop-blur-3xl rounded-[2rem] border border-white/30 p-6 animate-in slide-in-from-top-5 duration-300 ease-out
+            shadow-[0_32px_64px_rgba(59,130,246,0.08),0_16px_32px_rgba(147,197,253,0.12),inset_0_1px_0_rgba(255,255,255,0.8),inset_0_-1px_0_rgba(255,255,255,0.4)]
+            before:absolute before:inset-0 before:rounded-[2rem] before:bg-gradient-to-br before:from-white/70 before:via-white/40 before:to-white/20 before:backdrop-blur-sm before:-z-10
+            after:absolute after:inset-[1px] after:rounded-[calc(2rem-1px)] after:bg-gradient-to-br after:from-transparent after:via-white/20 after:to-transparent after:pointer-events-none"
+                          style={{
+                            backdropFilter:
+                              "blur(40px) saturate(1.8) brightness(1.1)",
+                            background:
+                              "linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.65) 50%, rgba(255,255,255,0.75) 100%)",
+                            boxShadow:
+                              "0 32px 64px rgba(59,130,246,0.08), 0 16px 32px rgba(147,197,253,0.12), inset 0 2px 4px rgba(255,255,255,0.9), inset 0 -2px 4px rgba(255,255,255,0.6)",
+                          }}
+                        >
+                          {/* Inner content */}
+                          <div className="relative z-10">
+                            <div className="grid grid-cols-8 gap-6">
+                              {/* Categories */}
+                              <div className="col-span-2">
+                                <div className="flex items-center gap-3 mb-6">
+                                  <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                                  <h3 className="font-bold text-gray-800 text-sm uppercase tracking-wider">
+                                    Programs
+                                  </h3>
                                 </div>
-                              ))}
-                            </div>
-                          </div>
-
-                          {/* Colleges */}
-                          <div className="col-span-3">
-                            <div className="flex items-center gap-2 mb-4">
-                              <div className="w-2 h-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"></div>
-                              <h3 className="font-bold text-gray-800 text-xs uppercase tracking-wider">
-                                Top Colleges
-                              </h3>
-                            </div>
-                            <div className="space-y-2 max-h-64 overflow-y-auto custom-scrollbar">
-                              {collegesData.map((college, index) => (
-                                <div
-                                  key={index}
-                                  className="group/college p-2.5 hover:bg-emerald-50 rounded-lg cursor-pointer transition-all duration-300"
-                                >
-                                  <div className="flex items-center justify-between">
-                                    <div className="flex-1">
-                                      <div className="text-xs font-semibold text-gray-800 group-hover/college:text-emerald-600 transition-colors truncate">
-                                        {college.name}
-                                      </div>
-                                      <div className="flex items-center gap-2 mt-1">
-                                        <span className="text-xs text-gray-500 flex items-center gap-1">
-                                          <MapPin className="w-2.5 h-2.5" />
-                                          {college.location}
-                                        </span>
-                                        <span className="text-xs font-medium text-emerald-600 bg-emerald-100 px-1.5 py-0.5 rounded-full">
-                                          ⭐ {college.rating}
+                                <div className="space-y-2">
+                                  {exploreOptions.map((option, index) => (
+                                    <div
+                                      key={index}
+                                      className="group/explore p-3 rounded-2xl cursor-pointer transition-all duration-300 ease-out
+                        hover:bg-gradient-to-br hover:from-white/80 hover:via-white/60 hover:to-white/70
+                        hover:shadow-[0_8px_32px_rgba(59,130,246,0.15),inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.5)]
+                        hover:scale-[1.03] hover:backdrop-blur-xl
+                        active:scale-[0.97] active:shadow-[0_4px_16px_rgba(59,130,246,0.1)]
+                        relative overflow-hidden
+                        before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-transparent before:via-white/30 before:to-transparent before:opacity-0 before:transition-opacity before:duration-300
+                        hover:before:opacity-100"
+                                    >
+                                      <div className="flex items-center space-x-3">
+                                        <div
+                                          className={`w-8 h-8 bg-gradient-to-br ${option.color} rounded-2xl flex items-center justify-center text-white 
+                            shadow-[0_4px_16px_rgba(0,0,0,0.2),inset_0_1px_2px_rgba(255,255,255,0.5)]
+                            group-hover/explore:shadow-[0_8px_24px_rgba(0,0,0,0.25),inset_0_2px_4px_rgba(255,255,255,0.7)]
+                            group-hover/explore:scale-110 transition-all duration-300 ease-out
+                            relative overflow-hidden
+                            before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-white/40 before:via-transparent before:to-transparent before:opacity-60`}
+                                        >
+                                          {option.icon}
+                                        </div>
+                                        <span className="text-sm font-semibold text-gray-800 group-hover/explore:text-blue-600 transition-colors duration-200">
+                                          {option.name}
                                         </span>
                                       </div>
                                     </div>
-                                    <div className="text-xs font-bold text-gray-600">
-                                      {college.fees}
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* Colleges */}
+                              <div className="col-span-3">
+                                <div className="flex items-center gap-3 mb-6">
+                                  <div className="w-3 h-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"></div>
+                                  <h3 className="font-bold text-gray-800 text-sm uppercase tracking-wider">
+                                    Top Colleges
+                                  </h3>
+                                </div>
+                                <div className="space-y-2 max-h-64 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent pr-2">
+                                  {collegesData.map((college, index) => (
+                                    <div
+                                      key={index}
+                                      className="group/college p-4 rounded-2xl cursor-pointer transition-all duration-300 ease-out
+                        hover:bg-gradient-to-br hover:from-white/80 hover:via-white/60 hover:to-white/70
+                        hover:shadow-[0_12px_40px_rgba(16,185,129,0.12),inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.5)]
+                        hover:scale-[1.02] hover:backdrop-blur-xl
+                        active:scale-[0.98] active:shadow-[0_6px_20px_rgba(16,185,129,0.08)]
+                        relative overflow-hidden
+                        before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-transparent before:via-white/30 before:to-transparent before:opacity-0 before:transition-opacity before:duration-300
+                        hover:before:opacity-100"
+                                    >
+                                      <div className="flex items-center justify-between">
+                                        <div className="flex-1 min-w-0">
+                                          <div className="text-sm font-semibold text-gray-800 group-hover/college:text-emerald-600 transition-colors duration-200 truncate mb-1">
+                                            {college.name}
+                                          </div>
+                                          <div className="flex items-center gap-3 mt-2">
+                                            <span className="text-xs text-gray-600 font-medium flex items-center gap-1">
+                                              <MapPin className="w-3 h-3 flex-shrink-0" />
+                                              <span className="truncate">
+                                                {college.location}
+                                              </span>
+                                            </span>
+                                            <span
+                                              className="text-xs font-semibold text-emerald-700 bg-gradient-to-br from-emerald-50/90 to-emerald-100/70 px-2 py-1 rounded-full whitespace-nowrap
+                              shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_8px_rgba(16,185,129,0.1)]
+                              backdrop-blur-sm border border-emerald-100/50"
+                                            >
+                                              ⭐ {college.rating}
+                                            </span>
+                                          </div>
+                                        </div>
+                                        <div
+                                          className="text-sm font-semibold text-gray-700 bg-gradient-to-br from-gray-50/90 to-gray-100/70 px-3 py-1.5 rounded-full ml-3 whitespace-nowrap
+                          shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_8px_rgba(0,0,0,0.05)]
+                          backdrop-blur-sm border border-gray-100/50"
+                                        >
+                                          {college.fees}
+                                        </div>
+                                      </div>
                                     </div>
-                                  </div>
+                                  ))}
                                 </div>
-                              ))}
+                              </div>
+
+                              {/* States */}
+                              <div className="col-span-2">
+                                <div className="flex items-center gap-3 mb-6">
+                                  <div className="w-3 h-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full"></div>
+                                  <h3 className="font-bold text-gray-800 text-sm uppercase tracking-wider">
+                                    By State
+                                  </h3>
+                                </div>
+                                <div className="space-y-2">
+                                  {statesData.map((state, index) => (
+                                    <div
+                                      key={index}
+                                      className="group/state p-3 rounded-2xl cursor-pointer transition-all duration-300 ease-out
+                        hover:bg-gradient-to-br hover:from-white/80 hover:via-white/60 hover:to-white/70
+                        hover:shadow-[0_8px_32px_rgba(139,92,246,0.15),inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.5)]
+                        hover:scale-[1.03] hover:backdrop-blur-xl
+                        active:scale-[0.97] active:shadow-[0_4px_16px_rgba(139,92,246,0.1)]
+                        relative overflow-hidden
+                        before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-transparent before:via-white/30 before:to-transparent before:opacity-0 before:transition-opacity before:duration-300
+                        hover:before:opacity-100"
+                                    >
+                                      <div className="text-sm font-semibold text-gray-800 group-hover/state:text-purple-600 transition-colors duration-200 mb-1">
+                                        {state.name}
+                                      </div>
+                                      <div className="text-xs text-gray-600 font-medium">
+                                        {state.colleges} colleges
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* Exams */}
+                              <div className="col-span-1">
+                                <div className="flex items-center gap-3 mb-6">
+                                  <div className="w-3 h-3 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full"></div>
+                                  <h3 className="font-bold text-gray-800 text-sm uppercase tracking-wider">
+                                    Exams
+                                  </h3>
+                                </div>
+                                <div className="space-y-2">
+                                  {examsData.map((exam, index) => (
+                                    <div
+                                      key={index}
+                                      className="group/exam p-3 rounded-2xl cursor-pointer transition-all duration-300 ease-out
+                        hover:bg-gradient-to-br hover:from-white/80 hover:via-white/60 hover:to-white/70
+                        hover:shadow-[0_8px_32px_rgba(245,158,11,0.15),inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.5)]
+                        hover:scale-[1.03] hover:backdrop-blur-xl
+                        active:scale-[0.97] active:shadow-[0_4px_16px_rgba(245,158,11,0.1)]
+                        relative overflow-hidden
+                        before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-transparent before:via-white/30 before:to-transparent before:opacity-0 before:transition-opacity before:duration-300
+                        hover:before:opacity-100"
+                                    >
+                                      <div className="text-sm font-semibold text-gray-800 group-hover/exam:text-amber-600 transition-colors duration-200 mb-1">
+                                        {exam.name}
+                                      </div>
+                                      <div className="text-xs text-gray-600 font-medium">
+                                        {exam.date}
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
                             </div>
                           </div>
 
-                          {/* States */}
-                          <div className="col-span-2">
-                            <div className="flex items-center gap-2 mb-4">
-                              <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full"></div>
-                              <h3 className="font-bold text-gray-800 text-xs uppercase tracking-wider">
-                                By State
-                              </h3>
-                            </div>
-                            <div className="space-y-1">
-                              {statesData.map((state, index) => (
-                                <div
-                                  key={index}
-                                  className="group/state p-2.5 hover:bg-purple-50 rounded-lg cursor-pointer transition-all duration-300"
-                                >
-                                  <span className="text-xs font-medium text-gray-700 group-hover/state:text-purple-600 transition-colors">
-                                    {state.name}
-                                  </span>
-                                  <div className="text-xs text-gray-500 mt-0.5">
-                                    {state.colleges} colleges
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
+                          {/* Water droplet decorative elements */}
+                          <div
+                            className="absolute top-6 right-6 w-16 h-12 bg-gradient-to-br from-blue-400/20 via-cyan-300/15 to-blue-500/10 rounded-full blur-md transform rotate-12
+            shadow-[inset_0_2px_4px_rgba(255,255,255,0.6)]"
+                          ></div>
+                          <div
+                            className="absolute bottom-8 left-8 w-12 h-16 bg-gradient-to-br from-emerald-400/20 via-teal-300/15 to-emerald-500/10 rounded-full blur-sm transform -rotate-12
+            shadow-[inset_0_2px_4px_rgba(255,255,255,0.6)]"
+                          ></div>
+                          <div
+                            className="absolute top-1/2 left-1/3 w-8 h-8 bg-gradient-to-br from-purple-400/15 via-indigo-300/10 to-purple-500/8 rounded-full blur-sm
+            shadow-[inset_0_1px_2px_rgba(255,255,255,0.7)]"
+                          ></div>
 
-                          {/* Exams */}
-                          <div className="col-span-1">
-                            <div className="flex items-center gap-1 mb-4">
-                              <div className="w-2 h-2 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full"></div>
-                              <h3 className="font-bold text-gray-800 text-xs uppercase tracking-wider">
-                                Exams
-                              </h3>
-                            </div>
-                            <div className="space-y-1">
-                              {examsData.map((exam, index) => (
-                                <div
-                                  key={index}
-                                  className="group/exam p-2 hover:bg-amber-50 rounded-lg cursor-pointer transition-all duration-300"
-                                >
-                                  <div className="text-xs font-semibold text-gray-800 group-hover/exam:text-amber-600 transition-colors">
-                                    {exam.name}
-                                  </div>
-                                  <div className="text-xs text-gray-500 mt-0.5">
-                                    {exam.date}
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
+                          {/* Floating water bubbles */}
+                          <div className="absolute top-12 right-20 w-3 h-3 bg-white/40 rounded-full blur-[1px] animate-pulse"></div>
+                          <div className="absolute bottom-16 left-20 w-2 h-2 bg-white/30 rounded-full blur-[1px] animate-pulse delay-300"></div>
+                          <div className="absolute top-20 left-1/2 w-1.5 h-1.5 bg-white/35 rounded-full blur-[0.5px] animate-pulse delay-700"></div>
                         </div>
+
+                        {/* Enhanced water droplet glow effect */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/8 via-cyan-300/6 to-purple-500/8 rounded-[2rem] blur-2xl -z-10"></div>
+                        <div className="absolute inset-2 bg-gradient-to-tr from-white/20 via-transparent to-white/10 rounded-[1.5rem] blur-xl -z-10"></div>
                       </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
 
                 {/* Search Bar - Only neomorphism element inside navbar */}
@@ -339,55 +432,103 @@ const Navbar = () => {
                 </div>
 
                 {/* Discover Dropdown */}
-                <div
-                  className="relative group"
-                  onMouseEnter={() => setDiscoverDropdown(true)}
-                  onMouseLeave={() => setDiscoverDropdown(false)}
-                >
-                  <button
-                    className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 rounded-full transition-all duration-300 hover:bg-white/8 ${
-                      isScrolled
-                        ? "text-blue-500 hover:text-blue-700"
-                        : "text-white/90 hover:text-white"
-                    }`}
-                  >
-                    <Grid3X3 className="w-4 h-4 font-bold" />
-                    <span className="font-extrabold">Discover</span>
-                  </button>
+               <div
+  className="relative group"
+  onMouseEnter={() => setDiscoverDropdown(true)}
+  onMouseLeave={() => setDiscoverDropdown(false)}
+>
+  {/* Button */}
+  <button
+    className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 rounded-full transition-all duration-300 hover:bg-white/10 ${
+      isScrolled
+        ? "text-blue-500 hover:text-blue-700"
+        : "text-white/90 hover:text-white"
+    }`}
+  >
+    <Grid3X3 className="w-4 h-4 font-bold transition-transform duration-300 group-hover:rotate-12" />
+    <span className="font-extrabold">Discover</span>
+  </button>
 
-                  {discoverDropdown && (
-                    <div className="absolute top-full right-0 mt-3 w-80">
-                      <div className="bg-white/95 backdrop-blur-2xl rounded-2xl shadow-2xl border border-white/30 p-5 animate-in slide-in-from-top-5 duration-300">
-                        <div className="flex items-center gap-2 mb-4">
-                          <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-                          <h3 className="font-bold text-gray-800 text-xs uppercase tracking-wider">
-                            Discover More
-                          </h3>
-                        </div>
-                        <div className="grid grid-cols-2 gap-3">
-                          {discoverOptions.map((option, index) => (
-                            <div
-                              key={index}
-                              className="group/discover p-3 hover:bg-blue-50 rounded-xl cursor-pointer transition-all duration-300"
-                            >
-                              <div
-                                className={`w-8 h-8 bg-gradient-to-r ${option.color} rounded-lg flex items-center justify-center text-white shadow-lg mb-2 group-hover/discover:scale-110 transition-transform duration-300`}
-                              >
-                                {option.icon}
-                              </div>
-                              <div className="text-sm font-semibold text-gray-800 group-hover/discover:text-blue-600 transition-colors">
-                                {option.name}
-                              </div>
-                              <div className="text-xs text-gray-500 mt-1">
-                                {option.desc}
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  )}
+  {/* Dropdown */}
+  <div className="absolute top-full right-0 mt-3 w-96 z-50">
+    {discoverDropdown && (
+      <div className="relative">
+        <div
+          className="backdrop-blur-3xl rounded-[2rem] border border-white/30 p-6 animate-in slide-in-from-top-5 duration-300 ease-out
+            shadow-[0_32px_64px_rgba(59,130,246,0.08),0_16px_32px_rgba(147,197,253,0.12),inset_0_1px_0_rgba(255,255,255,0.8),inset_0_-1px_0_rgba(255,255,255,0.4)]
+            before:absolute before:inset-0 before:rounded-[2rem] before:bg-gradient-to-br before:from-white/70 before:via-white/40 before:to-white/20 before:backdrop-blur-sm before:-z-10
+            after:absolute after:inset-[1px] after:rounded-[calc(2rem-1px)] after:bg-gradient-to-br after:from-transparent after:via-white/20 after:to-transparent after:pointer-events-none"
+          style={{
+            backdropFilter: "blur(40px) saturate(1.8) brightness(1.1)",
+            background: "linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.65) 50%, rgba(255,255,255,0.75) 100%)",
+            boxShadow: "0 32px 64px rgba(59,130,246,0.08), 0 16px 32px rgba(147,197,253,0.12), inset 0 2px 4px rgba(255,255,255,0.9), inset 0 -2px 4px rgba(255,255,255,0.6)"
+          }}
+        >
+          <div className="relative z-10">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
+              <h3 className="font-bold text-gray-800 text-sm uppercase tracking-wider">
+                Discover More
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              {discoverOptions.map((option, index) => (
+                <div
+                  key={index}
+                  className="group/discover p-4 rounded-2xl cursor-pointer transition-all duration-300 ease-out
+                    hover:bg-gradient-to-br hover:from-white/80 hover:via-white/60 hover:to-white/70
+                    hover:shadow-[0_12px_40px_rgba(59,130,246,0.12),inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.5)]
+                    hover:scale-[1.03] hover:backdrop-blur-xl
+                    active:scale-[0.97] active:shadow-[0_6px_20px_rgba(59,130,246,0.08)]
+                    relative overflow-hidden
+                    before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-transparent before:via-white/30 before:to-transparent before:opacity-0 before:transition-opacity before:duration-300
+                    hover:before:opacity-100"
+                >
+                  <div
+                    className={`w-10 h-10 bg-gradient-to-br ${option.color} rounded-2xl flex items-center justify-center text-white mb-3
+                      shadow-[0_4px_16px_rgba(0,0,0,0.2),inset_0_1px_2px_rgba(255,255,255,0.5)]
+                      group-hover/discover:shadow-[0_8px_24px_rgba(0,0,0,0.25),inset_0_2px_4px_rgba(255,255,255,0.7)]
+                      group-hover/discover:scale-110 transition-all duration-300 ease-out
+                      relative overflow-hidden
+                      before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-white/40 before:via-transparent before:to-transparent before:opacity-60`}
+                  >
+                    {option.icon}
+                  </div>
+
+                  <div className="text-sm font-semibold text-gray-800 group-hover/discover:text-blue-600 transition-colors duration-300 mb-1">
+                    {option.name}
+                  </div>
+
+                  <div className="text-xs text-gray-600 font-medium leading-tight">
+                    {option.desc}
+                  </div>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Water droplet decorative elements */}
+          <div className="absolute top-6 right-6 w-14 h-10 bg-gradient-to-br from-blue-400/20 via-cyan-300/15 to-purple-500/10 rounded-full blur-md transform rotate-12
+            shadow-[inset_0_2px_4px_rgba(255,255,255,0.6)]"></div>
+          <div className="absolute bottom-6 left-6 w-10 h-14 bg-gradient-to-br from-purple-400/20 via-indigo-300/15 to-blue-500/10 rounded-full blur-sm transform -rotate-12
+            shadow-[inset_0_2px_4px_rgba(255,255,255,0.6)]"></div>
+          <div className="absolute top-1/2 left-1/2 w-6 h-6 bg-gradient-to-br from-cyan-400/15 via-blue-300/10 to-purple-500/8 rounded-full blur-sm transform translate-x-8
+            shadow-[inset_0_1px_2px_rgba(255,255,255,0.7)]"></div>
+          
+          {/* Floating water bubbles */}
+          <div className="absolute top-10 right-16 w-2.5 h-2.5 bg-white/40 rounded-full blur-[1px] animate-pulse"></div>
+          <div className="absolute bottom-12 left-16 w-2 h-2 bg-white/30 rounded-full blur-[1px] animate-pulse delay-500"></div>
+          <div className="absolute top-16 left-1/3 w-1.5 h-1.5 bg-white/35 rounded-full blur-[0.5px] animate-pulse delay-1000"></div>
+        </div>
+
+        {/* Enhanced water droplet glow effect */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/8 via-cyan-300/6 to-purple-500/8 rounded-[2rem] blur-2xl -z-10"></div>
+        <div className="absolute inset-2 bg-gradient-to-tr from-white/20 via-transparent to-white/10 rounded-[1.5rem] blur-xl -z-10"></div>
+      </div>
+    )}
+  </div>
+</div>
               </div>
 
               {/* CTA Button */}
@@ -399,7 +540,7 @@ const Navbar = () => {
                       : "text-white/90 hover:text-white"
                   }`}
                 >
-                 <span className="font-extrabold">Need Counselling?</span>
+                  <span className="font-extrabold">Need Counselling?</span>
                 </button>
               </div>
 

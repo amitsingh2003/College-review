@@ -223,7 +223,7 @@ const EducationPrograms = () => {
   return (
     <div
       className="min-h-screen bg-gray-100"
-      style={{
+     style={{
         background: "linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%)",
       }}
     >

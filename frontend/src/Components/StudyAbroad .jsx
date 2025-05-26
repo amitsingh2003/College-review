@@ -134,7 +134,9 @@ const StudyAbroad = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-50 to-white">
+    <div className="min-h-screen bg-gray-100" style={{
+        background: "linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%)",
+      }}>
       {/* Header */}
       <div className="pt-16 pb-8 px-6">
         <div className="max-w-7xl mx-auto text-center">
