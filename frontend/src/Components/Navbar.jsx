@@ -15,6 +15,7 @@ import {
   X,
   Sparkles,
 } from "lucide-react";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -147,16 +148,19 @@ const Navbar = () => {
         >
           <div className="px-4 lg:px-6">
             <div className="flex items-center justify-between h-12 lg:h-14">
-              {/* Logo */}
               <div className="flex items-center flex-shrink-0 group">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2 lg:space-x-3">
                   <img
-                    src="/src/assets/logo.png"
+                    src={logo} // Use the imported logo variable
                     alt="SCS Global Logo"
-                    className="h-8 w-auto lg:h-10 transition-all duration-500"
+                    className="h-6 w-auto sm:h-8 lg:h-10 transition-all duration-500"
+                    onError={(e) => {
+                      console.log("Logo failed to load");
+                      e.target.style.display = "none";
+                    }}
                   />
                   <span
-                    className={`text-lg lg:text-xl font-extrabold transition-all duration-500 ${
+                    className={`text-sm sm:text-lg lg:text-xl font-extrabold transition-all duration-500 ${
                       isScrolled ? "text-blue-500" : "text-white"
                     }`}
                   >
@@ -167,7 +171,6 @@ const Navbar = () => {
 
               {/* Desktop Navigation */}
               <div className="hidden lg:flex items-center space-x-6 flex-1 justify-center">
-                {/* Explore Dropdown */}
                 {/* Explore Dropdown */}
                 <div
                   className="relative group"
@@ -432,51 +435,54 @@ const Navbar = () => {
                 </div>
 
                 {/* Discover Dropdown */}
-               <div
-  className="relative group"
-  onMouseEnter={() => setDiscoverDropdown(true)}
-  onMouseLeave={() => setDiscoverDropdown(false)}
->
-  {/* Button */}
-  <button
-    className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 rounded-full transition-all duration-300 hover:bg-white/10 ${
-      isScrolled
-        ? "text-blue-500 hover:text-blue-700"
-        : "text-white/90 hover:text-white"
-    }`}
-  >
-    <Grid3X3 className="w-4 h-4 font-bold transition-transform duration-300 group-hover:rotate-12" />
-    <span className="font-extrabold">Discover</span>
-  </button>
+                <div
+                  className="relative group"
+                  onMouseEnter={() => setDiscoverDropdown(true)}
+                  onMouseLeave={() => setDiscoverDropdown(false)}
+                >
+                  {/* Button */}
+                  <button
+                    className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 rounded-full transition-all duration-300 hover:bg-white/10 ${
+                      isScrolled
+                        ? "text-blue-500 hover:text-blue-700"
+                        : "text-white/90 hover:text-white"
+                    }`}
+                  >
+                    <Grid3X3 className="w-4 h-4 font-bold transition-transform duration-300 group-hover:rotate-12" />
+                    <span className="font-extrabold">Discover</span>
+                  </button>
 
-  {/* Dropdown */}
-  <div className="absolute top-full right-0 mt-3 w-96 z-50">
-    {discoverDropdown && (
-      <div className="relative">
-        <div
-          className="backdrop-blur-3xl rounded-[2rem] border border-white/30 p-6 animate-in slide-in-from-top-5 duration-300 ease-out
+                  {/* Dropdown */}
+                  <div className="absolute top-full right-0 mt-3 w-96 z-50">
+                    {discoverDropdown && (
+                      <div className="relative">
+                        <div
+                          className="backdrop-blur-3xl rounded-[2rem] border border-white/30 p-6 animate-in slide-in-from-top-5 duration-300 ease-out
             shadow-[0_32px_64px_rgba(59,130,246,0.08),0_16px_32px_rgba(147,197,253,0.12),inset_0_1px_0_rgba(255,255,255,0.8),inset_0_-1px_0_rgba(255,255,255,0.4)]
             before:absolute before:inset-0 before:rounded-[2rem] before:bg-gradient-to-br before:from-white/70 before:via-white/40 before:to-white/20 before:backdrop-blur-sm before:-z-10
             after:absolute after:inset-[1px] after:rounded-[calc(2rem-1px)] after:bg-gradient-to-br after:from-transparent after:via-white/20 after:to-transparent after:pointer-events-none"
-          style={{
-            backdropFilter: "blur(40px) saturate(1.8) brightness(1.1)",
-            background: "linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.65) 50%, rgba(255,255,255,0.75) 100%)",
-            boxShadow: "0 32px 64px rgba(59,130,246,0.08), 0 16px 32px rgba(147,197,253,0.12), inset 0 2px 4px rgba(255,255,255,0.9), inset 0 -2px 4px rgba(255,255,255,0.6)"
-          }}
-        >
-          <div className="relative z-10">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
-              <h3 className="font-bold text-gray-800 text-sm uppercase tracking-wider">
-                Discover More
-              </h3>
-            </div>
+                          style={{
+                            backdropFilter:
+                              "blur(40px) saturate(1.8) brightness(1.1)",
+                            background:
+                              "linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.65) 50%, rgba(255,255,255,0.75) 100%)",
+                            boxShadow:
+                              "0 32px 64px rgba(59,130,246,0.08), 0 16px 32px rgba(147,197,253,0.12), inset 0 2px 4px rgba(255,255,255,0.9), inset 0 -2px 4px rgba(255,255,255,0.6)",
+                          }}
+                        >
+                          <div className="relative z-10">
+                            <div className="flex items-center gap-3 mb-6">
+                              <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
+                              <h3 className="font-bold text-gray-800 text-sm uppercase tracking-wider">
+                                Discover More
+                              </h3>
+                            </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              {discoverOptions.map((option, index) => (
-                <div
-                  key={index}
-                  className="group/discover p-4 rounded-2xl cursor-pointer transition-all duration-300 ease-out
+                            <div className="grid grid-cols-2 gap-4">
+                              {discoverOptions.map((option, index) => (
+                                <div
+                                  key={index}
+                                  className="group/discover p-4 rounded-2xl cursor-pointer transition-all duration-300 ease-out
                     hover:bg-gradient-to-br hover:from-white/80 hover:via-white/60 hover:to-white/70
                     hover:shadow-[0_12px_40px_rgba(59,130,246,0.12),inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.5)]
                     hover:scale-[1.03] hover:backdrop-blur-xl
@@ -484,51 +490,57 @@ const Navbar = () => {
                     relative overflow-hidden
                     before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-transparent before:via-white/30 before:to-transparent before:opacity-0 before:transition-opacity before:duration-300
                     hover:before:opacity-100"
-                >
-                  <div
-                    className={`w-10 h-10 bg-gradient-to-br ${option.color} rounded-2xl flex items-center justify-center text-white mb-3
+                                >
+                                  <div
+                                    className={`w-10 h-10 bg-gradient-to-br ${option.color} rounded-2xl flex items-center justify-center text-white mb-3
                       shadow-[0_4px_16px_rgba(0,0,0,0.2),inset_0_1px_2px_rgba(255,255,255,0.5)]
                       group-hover/discover:shadow-[0_8px_24px_rgba(0,0,0,0.25),inset_0_2px_4px_rgba(255,255,255,0.7)]
                       group-hover/discover:scale-110 transition-all duration-300 ease-out
                       relative overflow-hidden
                       before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-white/40 before:via-transparent before:to-transparent before:opacity-60`}
-                  >
-                    {option.icon}
-                  </div>
+                                  >
+                                    {option.icon}
+                                  </div>
 
-                  <div className="text-sm font-semibold text-gray-800 group-hover/discover:text-blue-600 transition-colors duration-300 mb-1">
-                    {option.name}
-                  </div>
+                                  <div className="text-sm font-semibold text-gray-800 group-hover/discover:text-blue-600 transition-colors duration-300 mb-1">
+                                    {option.name}
+                                  </div>
 
-                  <div className="text-xs text-gray-600 font-medium leading-tight">
-                    {option.desc}
+                                  <div className="text-xs text-gray-600 font-medium leading-tight">
+                                    {option.desc}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Water droplet decorative elements */}
+                          <div
+                            className="absolute top-6 right-6 w-14 h-10 bg-gradient-to-br from-blue-400/20 via-cyan-300/15 to-purple-500/10 rounded-full blur-md transform rotate-12
+            shadow-[inset_0_2px_4px_rgba(255,255,255,0.6)]"
+                          ></div>
+                          <div
+                            className="absolute bottom-6 left-6 w-10 h-14 bg-gradient-to-br from-purple-400/20 via-indigo-300/15 to-blue-500/10 rounded-full blur-sm transform -rotate-12
+            shadow-[inset_0_2px_4px_rgba(255,255,255,0.6)]"
+                          ></div>
+                          <div
+                            className="absolute top-1/2 left-1/2 w-6 h-6 bg-gradient-to-br from-cyan-400/15 via-blue-300/10 to-purple-500/8 rounded-full blur-sm transform translate-x-8
+            shadow-[inset_0_1px_2px_rgba(255,255,255,0.7)]"
+                          ></div>
+
+                          {/* Floating water bubbles */}
+                          <div className="absolute top-10 right-16 w-2.5 h-2.5 bg-white/40 rounded-full blur-[1px] animate-pulse"></div>
+                          <div className="absolute bottom-12 left-16 w-2 h-2 bg-white/30 rounded-full blur-[1px] animate-pulse delay-500"></div>
+                          <div className="absolute top-16 left-1/3 w-1.5 h-1.5 bg-white/35 rounded-full blur-[0.5px] animate-pulse delay-1000"></div>
+                        </div>
+
+                        {/* Enhanced water droplet glow effect */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/8 via-cyan-300/6 to-purple-500/8 rounded-[2rem] blur-2xl -z-10"></div>
+                        <div className="absolute inset-2 bg-gradient-to-tr from-white/20 via-transparent to-white/10 rounded-[1.5rem] blur-xl -z-10"></div>
+                      </div>
+                    )}
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Water droplet decorative elements */}
-          <div className="absolute top-6 right-6 w-14 h-10 bg-gradient-to-br from-blue-400/20 via-cyan-300/15 to-purple-500/10 rounded-full blur-md transform rotate-12
-            shadow-[inset_0_2px_4px_rgba(255,255,255,0.6)]"></div>
-          <div className="absolute bottom-6 left-6 w-10 h-14 bg-gradient-to-br from-purple-400/20 via-indigo-300/15 to-blue-500/10 rounded-full blur-sm transform -rotate-12
-            shadow-[inset_0_2px_4px_rgba(255,255,255,0.6)]"></div>
-          <div className="absolute top-1/2 left-1/2 w-6 h-6 bg-gradient-to-br from-cyan-400/15 via-blue-300/10 to-purple-500/8 rounded-full blur-sm transform translate-x-8
-            shadow-[inset_0_1px_2px_rgba(255,255,255,0.7)]"></div>
-          
-          {/* Floating water bubbles */}
-          <div className="absolute top-10 right-16 w-2.5 h-2.5 bg-white/40 rounded-full blur-[1px] animate-pulse"></div>
-          <div className="absolute bottom-12 left-16 w-2 h-2 bg-white/30 rounded-full blur-[1px] animate-pulse delay-500"></div>
-          <div className="absolute top-16 left-1/3 w-1.5 h-1.5 bg-white/35 rounded-full blur-[0.5px] animate-pulse delay-1000"></div>
-        </div>
-
-        {/* Enhanced water droplet glow effect */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/8 via-cyan-300/6 to-purple-500/8 rounded-[2rem] blur-2xl -z-10"></div>
-        <div className="absolute inset-2 bg-gradient-to-tr from-white/20 via-transparent to-white/10 rounded-[1.5rem] blur-xl -z-10"></div>
-      </div>
-    )}
-  </div>
-</div>
               </div>
 
               {/* CTA Button */}

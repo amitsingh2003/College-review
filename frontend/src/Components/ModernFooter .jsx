@@ -17,8 +17,7 @@ import {
   Send,
   Heart,
 } from "lucide-react";
-import logo from '../assets/logo.png'; // adjust path if necessary
-
+import logo from "../assets/logo.png"; 
 
 const NeomorphicFooter = () => {
   const [hoveredStat, setHoveredStat] = useState(null);
@@ -149,27 +148,26 @@ const NeomorphicFooter = () => {
         <div className="px-4 sm:px-6 lg:px-8 ">
           <div className="max-w-7xl mx-auto text-center">
             {/* Neomorphic Brand Container */}
-           <div className="bg-white/20 backdrop-blur-xl rounded-3xl lg:rounded-[3rem] p-8 lg:p-12 shadow-[20px_20px_60px_#d1d9e6,-20px_-20px_60px_#ffffff] border border-white/30 mb-12">
-  {/* Logo + Title */}
-  <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6 mb-6">
-    <img
-      src={logo}
-      alt="SCS Logo"
-      className="h-14 w-auto lg:h-20 transition-all duration-500"
-    />
-    <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent text-center lg:text-left">
-      SCS Educational Consultancy
-    </h1>
-  </div>
+            <div className="bg-white/20 backdrop-blur-xl rounded-3xl lg:rounded-[3rem] p-8 lg:p-12 shadow-[20px_20px_60px_#d1d9e6,-20px_-20px_60px_#ffffff] border border-white/30 mb-12">
+              {/* Logo + Title */}
+              <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6 mb-6">
+                <img
+                  src={logo}
+                  alt="SCS Logo"
+                  className="h-14 w-auto lg:h-20 transition-all duration-500"
+                />
+                <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent text-center lg:text-left">
+                  SCS Educational Consultancy
+                </h1>
+              </div>
 
-  {/* Description */}
-  <p className="text-lg lg:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium text-center">
-    India's most trusted education platform helping students make informed
-    decisions about their academic future with comprehensive college and
-    course information.
-  </p>
-</div>
-
+              {/* Description */}
+              <p className="text-lg lg:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium text-center">
+                India's most trusted education platform helping students make
+                informed decisions about their academic future with
+                comprehensive college and course information.
+              </p>
+            </div>
           </div>
         </div>
 
