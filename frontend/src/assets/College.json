@@ -1,0 +1,1307 @@
+[
+  {
+    "name": "IIT Madras",
+    "logo": "https://study.iitm.ac.in/ds/assets/img/logo.png",
+    "about": "Indian Institute of Technology Madras is one of the foremost institutes of national importance in higher technological education, basic and applied research. Founded in 1959 with German collaboration, it is recognized globally for excellence in engineering education and research.",
+    "established": "1959",
+    "location": "Chennai, Tamil Nadu",
+    "ranking": "NIRF 2024: #1 (Overall), #1 (Engineering)",
+    "website": "https://www.iitm.ac.in/",
+    "contact": {
+      "email": "dean@iitm.ac.in",
+      "phone": "+91-44-2257-4000",
+      "address": "Indian Institute of Technology Madras, Chennai - 600036, Tamil Nadu, India"
+    },
+    "campus_life": "Sprawling 617-acre campus with lush greenery, deer park, and modern facilities. Active student community with 100+ clubs and societies. Cultural diversity with students from across India and abroad.",
+    "facilities": [
+      "Central Library with 500,000+ books",
+      "Research Park for industry collaboration",
+      "Incubation Cell for startups",
+      "Swimming pool and sports complex",
+      "24x7 medical center",
+      "Hostels for 6000+ students",
+      "Wi-Fi enabled campus",
+      "Advanced laboratories",
+      "Auditoriums and seminar halls",
+      "Cafeterias and dining halls"
+    ],
+    "notable_alumni": [
+      "Raghuram Rajan (Former RBI Governor)",
+      "Sunder Pichai (CEO, Alphabet Inc.)",
+      "Kris Gopalakrishnan (Co-founder, Infosys)",
+      "R. Chidambaram (Nuclear Scientist)",
+      "Kiran Mazumdar-Shaw (Founder, Biocon)",
+      "Venkatesh Prasad (Cricketer)",
+      "N. R. Narayana Murthy (Co-founder, Infosys)"
+    ],
+    "images": [
+      "https://www.iitm.ac.in/sites/default/files/campus1.jpg",
+      "https://www.iitm.ac.in/sites/default/files/main_building.jpg"
+    ],
+    "courses": {
+      "undergraduate": [
+        "B.Tech in Aerospace Engineering",
+        "B.Tech in Biotechnology",
+        "B.Tech in Chemical Engineering",
+        "B.Tech in Civil Engineering",
+        "B.Tech in Computer Science and Engineering",
+        "B.Tech in Electrical Engineering",
+        "B.Tech in Engineering Physics",
+        "B.Tech in Mechanical Engineering",
+        "B.Tech in Metallurgical and Materials Engineering",
+        "B.Tech in Naval Architecture and Ocean Engineering"
+      ],
+      "postgraduate": [
+        "M.Tech in various specializations",
+        "M.S. (Research)",
+        "MBA",
+        "M.A. in English Studies",
+        "M.Sc. in Applied Mathematics",
+        "M.Sc. in Chemistry",
+        "M.Sc. in Physics"
+      ],
+      "phd": [
+        "Ph.D in Engineering disciplines",
+        "Ph.D in Sciences",
+        "Ph.D in Humanities and Social Sciences",
+        "Ph.D in Management Studies"
+      ]
+    },
+    "departments": [
+      "Aerospace Engineering",
+      "Applied Mechanics",
+      "Biotechnology",
+      "Chemical Engineering",
+      "Chemistry",
+      "Civil Engineering",
+      "Computer Science and Engineering",
+      "Electrical Engineering",
+      "Engineering Design",
+      "Humanities and Social Sciences",
+      "Management Studies",
+      "Materials Science and Engineering",
+      "Mathematics",
+      "Mechanical Engineering",
+      "Metallurgical and Materials Engineering",
+      "Naval Architecture and Ocean Engineering",
+      "Physics"
+    ],
+    "admission": {
+      "process": "Admission through JEE Advanced for B.Tech, GATE for M.Tech, CAT for MBA, and respective entrance exams for other programs",
+      "exams_accepted": ["JEE Advanced", "GATE", "CAT", "JAM", "CSIR-NET"],
+      "eligibility": "12th with PCM for B.Tech, Bachelor's degree for PG programs"
+    },
+    "placements": {
+      "average_package": "₹21.48 LPA",
+      "highest_package": "₹1.31 Crore",
+      "top_recruiters": [
+        "Microsoft",
+        "Google",
+        "Amazon",
+        "Apple",
+        "Goldman Sachs",
+        "JP Morgan Chase",
+        "Intel",
+        "Samsung",
+        "Adobe",
+        "Qualcomm",
+        "DE Shaw",
+        "McKinsey & Company"
+      ]
+    },
+    "research": {
+      "focus_areas": [
+        "Artificial Intelligence and Data Science",
+        "Aerospace and Defense",
+        "Clean Energy and Environment",
+        "Healthcare and Medical Devices",
+        "Materials and Manufacturing",
+        "Ocean Engineering",
+        "Rural Development"
+      ],
+      "centers": [
+        "Centre for Innovation",
+        "Research Park",
+        "Centre for Industrial Consultancy and Sponsored Research",
+        "Robert Bosch Centre for Data Science and AI"
+      ]
+    },
+    "festivals": {
+      "technical": "Shaastra - Asia's largest science and technology festival",
+      "cultural": "Saarang - Premier cultural festival of South India",
+      "sports": "Inter-IIT Sports Meet participation"
+    }
+  },
+  {
+    "name": "IIT Delhi",
+    "logo": "https://home.iitd.ac.in/images/logo-iit.png",
+    "about": "Established in 1961, IIT Delhi is one of the premier engineering institutes in India. Known for its excellence in technical education, research, and innovation, it has consistently maintained its position among the top engineering institutions globally.",
+    "established": "1961",
+    "location": "New Delhi, Delhi",
+    "ranking": "NIRF 2024: #2 (Overall), #2 (Engineering)",
+    "website": "https://home.iitd.ac.in/",
+    "contact": {
+      "email": "registrar@admin.iitd.ac.in",
+      "phone": "+91-11-2659-1020",
+      "address": "Indian Institute of Technology Delhi, Hauz Khas, New Delhi - 110016, India"
+    },
+    "campus_life": "325-acre urban campus in South Delhi with modern infrastructure. Vibrant student life with numerous clubs, technical societies, and cultural activities. Proximity to India's capital provides excellent industry exposure.",
+    "facilities": [
+      "Central Scientific Instruments Organisation",
+      "Central Library with digital resources",
+      "Kusuma School of Biological Sciences",
+      "Bharti School of Telecommunication",
+      "Advanced manufacturing labs",
+      "Sports complexes and gymnasium",
+      "Multiple hostels",
+      "Health center",
+      "Conference facilities",
+      "Innovation and incubation centers"
+    ],
+    "notable_alumni": [
+      "Vinod Khosla (Co-founder, Sun Microsystems)",
+      "Arvind Kejriwal (Chief Minister, Delhi)",
+      "Raj Reddy (Turing Award Winner)",
+      "Yusuf Hamied (Chairman, Cipla)",
+      "Sanjeev Aga (Former CEO, Idea Cellular)",
+      "Suhas Patil (Founder, Cirrus Logic)",
+      "Victor Menezes (Former Senior Vice Chairman, Citigroup)"
+    ],
+    "images": [
+      "https://home.iitd.ac.in/sites/default/files/main_gate.jpg",
+      "https://home.iitd.ac.in/sites/default/files/campus_view.jpg"
+    ],
+    "courses": {
+      "undergraduate": [
+        "B.Tech in Biotechnology",
+        "B.Tech in Chemical Engineering",
+        "B.Tech in Civil Engineering",
+        "B.Tech in Computer Science and Engineering",
+        "B.Tech in Electrical Engineering",
+        "B.Tech in Engineering Physics",
+        "B.Tech in Mathematics and Computing",
+        "B.Tech in Mechanical Engineering",
+        "B.Tech in Production and Industrial Engineering",
+        "B.Tech in Textile Technology"
+      ],
+      "postgraduate": [
+        "M.Tech in various specializations",
+        "M.S. (Research)",
+        "MBA",
+        "M.Des (Design)",
+        "M.Sc. in Applied Mathematics",
+        "M.Sc. in Chemistry",
+        "M.Sc. in Physics"
+      ],
+      "phd": [
+        "Ph.D in Engineering",
+        "Ph.D in Sciences",
+        "Ph.D in Humanities and Social Sciences",
+        "Ph.D in Management"
+      ]
+    },
+    "departments": [
+      "Applied Mechanics",
+      "Biochemical Engineering and Biotechnology",
+      "Chemical Engineering",
+      "Chemistry",
+      "Civil Engineering",
+      "Computer Science and Engineering",
+      "Electrical Engineering",
+      "Humanities and Social Sciences",
+      "Management Studies",
+      "Materials Science and Engineering",
+      "Mathematics",
+      "Mechanical Engineering",
+      "Physics",
+      "Textile and Fibre Engineering"
+    ],
+    "admission": {
+      "process": "JEE Advanced for B.Tech, GATE for M.Tech, CAT for MBA, and entrance exams for other programs",
+      "exams_accepted": ["JEE Advanced", "GATE", "CAT", "CEED", "JAM"],
+      "eligibility": "12th with Physics, Chemistry, Mathematics for B.Tech"
+    },
+    "placements": {
+      "average_package": "₹36.9 LPA",
+      "highest_package": "₹1.0 Crore",
+      "top_recruiters": [
+        "Microsoft",
+        "Google",
+        "Amazon",
+        "Goldman Sachs",
+        "JP Morgan",
+        "Adobe",
+        "Samsung",
+        "Intel",
+        "Qualcomm",
+        "DE Shaw",
+        "American Express",
+        "Flipkart"
+      ]
+    },
+    "research": {
+      "focus_areas": [
+        "Artificial Intelligence and Machine Learning",
+        "Renewable Energy",
+        "Biotechnology and Biomedical Engineering",
+        "Nanotechnology",
+        "Transportation Engineering",
+        "Environmental Engineering",
+        "Cybersecurity"
+      ],
+      "centers": [
+        "Centre for Energy Studies",
+        "Centre for Biomedical Engineering",
+        "Centre for Applied Research in Electronics",
+        "Foundation for Innovation and Technology Transfer"
+      ]
+    },
+    "festivals": {
+      "technical": "Tryst - Annual technical festival",
+      "cultural": "Rendezvous - Cultural festival",
+      "sports": "Inter-IIT Sports and Cultural Meet"
+    }
+  },
+  {
+    "name": "IIT Bombay",
+    "logo": "https://www.iitb.ac.in/themes/custom/iitb_bootstrap/logo.png",
+    "about": "Founded in 1958, IIT Bombay is India's premier technical university and a pioneer in engineering education and research. Located in Powai, Mumbai, it is known for producing world-class engineers and entrepreneurs.",
+    "established": "1958",
+    "location": "Mumbai, Maharashtra",
+    "ranking": "NIRF 2024: #3 (Overall), #3 (Engineering)",
+    "website": "https://www.iitb.ac.in/",
+    "contact": {
+      "email": "registrar@iitb.ac.in",
+      "phone": "+91-22-2572-2545",
+      "address": "Indian Institute of Technology Bombay, Powai, Mumbai - 400076, Maharashtra, India"
+    },
+    "campus_life": "550-acre scenic campus with lakes and hills. Rich cultural heritage with active student participation in technical and cultural activities. Strong alumni network and industry connections in Mumbai's financial capital.",
+    "facilities": [
+      "Sophisticated laboratories",
+      "Central Library with vast collection",
+      "Computer Center with high-speed internet",
+      "Sports facilities including swimming pool",
+      "Multiple hostels",
+      "Hospital and health center",
+      "Amphitheater and auditoriums",
+      "Guest house facilities",
+      "Shopping complex",
+      "Innovation and Entrepreneurship Center"
+    ],
+    "notable_alumni": [
+      "Mukesh Ambani (Chairman, Reliance Industries)",
+      "Nandan Nilekani (Co-founder, Infosys)",
+      "Uday Kotak (Executive Vice Chairman, Kotak Mahindra Bank)",
+      "Arun Sarin (Former CEO, Vodafone)",
+      "Hemant Kanoria (Chairman, Srei Infrastructure)",
+      "Cyrus Mistry (Former Chairman, Tata Sons)",
+      "Sunil Bharti Mittal (Chairman, Bharti Airtel)"
+    ],
+    "images": [
+      "https://www.iitb.ac.in/sites/default/files/main_building.jpg",
+      "https://www.iitb.ac.in/sites/default/files/campus_lake.jpg"
+    ],
+    "courses": {
+      "undergraduate": [
+        "B.Tech in Aerospace Engineering",
+        "B.Tech in Chemical Engineering",
+        "B.Tech in Civil Engineering",
+        "B.Tech in Computer Science and Engineering",
+        "B.Tech in Electrical Engineering",
+        "B.Tech in Engineering Physics",
+        "B.Tech in Environmental Science and Engineering",
+        "B.Tech in Mechanical Engineering",
+        "B.Tech in Metallurgical Engineering and Materials Science",
+        "Dual Degree programs"
+      ],
+      "postgraduate": [
+        "M.Tech in various specializations",
+        "M.S. (Research)",
+        "MBA",
+        "M.Des",
+        "M.Sc. in Applied Statistics and Informatics",
+        "M.Sc. in Chemistry",
+        "M.Sc. in Mathematics",
+        "M.Sc. in Physics"
+      ],
+      "phd": [
+        "Ph.D in all Engineering departments",
+        "Ph.D in Sciences",
+        "Ph.D in Humanities and Social Sciences",
+        "Ph.D in Management"
+      ]
+    },
+    "departments": [
+      "Aerospace Engineering",
+      "Biosciences and Bioengineering",
+      "Chemical Engineering",
+      "Chemistry",
+      "Civil Engineering",
+      "Computer Science and Engineering",
+      "Earth Sciences",
+      "Electrical Engineering",
+      "Energy Science and Engineering",
+      "Humanities and Social Sciences",
+      "Industrial Design Centre",
+      "Materials Science and Engineering",
+      "Mathematics",
+      "Mechanical Engineering",
+      "Metallurgical Engineering and Materials Science",
+      "Physics",
+      "Systems and Control Engineering"
+    ],
+    "admission": {
+      "process": "JEE Advanced for B.Tech, GATE for M.Tech, CAT for MBA",
+      "exams_accepted": ["JEE Advanced", "GATE", "CAT", "CEED", "UCEED"],
+      "eligibility": "12th with PCM, specific requirements for each program"
+    },
+    "placements": {
+      "average_package": "₹23.50 LPA",
+      "highest_package": "₹1.0+ Crore",
+      "top_recruiters": [
+        "Microsoft",
+        "Google",
+        "Amazon",
+        "Goldman Sachs",
+        "JP Morgan Chase",
+        "McKinsey & Company",
+        "BCG",
+        "Bain & Company",
+        "Adobe",
+        "Qualcomm",
+        "Samsung",
+        "Intel"
+      ]
+    },
+    "research": {
+      "focus_areas": [
+        "Materials Science and Engineering",
+        "Nanotechnology",
+        "Climate Studies",
+        "Biosciences and Bioengineering",
+        "Artificial Intelligence",
+        "Renewable Energy",
+        "Aerospace Engineering"
+      ],
+      "centers": [
+        "Society for Innovation and Entrepreneurship",
+        "National Centre for Aerospace Innovation and Research",
+        "Centre of Excellence in Nanoelectronics",
+        "Interdisciplinary Programme in Climate Studies"
+      ]
+    },
+    "festivals": {
+      "technical": "Techfest - Asia's largest science and technology festival",
+      "cultural": "Mood Indigo - Cultural festival",
+      "sports": "Inter-IIT Sports Meet"
+    }
+  },
+  {
+    "name": "IIT Kharagpur",
+    "logo": "https://th.bing.com/th/id/OSK.MYfSELdYlahaEwkPqJ00uhRJVYqj_-iN4J6HA-kp4qA?w=224&h=200&c=12&rs=1&o=6&dpr=1.3&pid=SANGAM",
+    "about": "Established in 1951, IIT Kharagpur is the first IIT and was instrumental in the development of technical education in post-independence India. It is known for its comprehensive academic programs and research excellence.",
+    "established": "1951",
+    "location": "Kharagpur, West Bengal",
+    "ranking": "NIRF 2024: #5 (Overall), #4 (Engineering)",
+    "website": "https://www.iitkgp.ac.in/",
+    "contact": {
+      "email": "registrar@iitkgp.ac.in",
+      "phone": "+91-3222-255221",
+      "address": "Indian Institute of Technology Kharagpur, Kharagpur - 721302, West Bengal, India"
+    },
+    "campus_life": "2100-acre sprawling campus, one of the largest in the world. Rich heritage and traditions with strong alumni network. Diverse student community with active participation in academics, sports, and cultural activities.",
+    "facilities": [
+      "Central Library - one of the largest in India",
+      "Technology Guest House",
+      "BC Roy Technology Hospital",
+      "Nehru Museum",
+      "Gymkhana Club",
+      "Swimming pool and sports complex",
+      "Multiple research centers",
+      "Advanced laboratories",
+      "Student activity center",
+      "Railway station within campus"
+    ],
+    "notable_alumni": [
+      "Jamshed J. Irani (Former MD, Tata Steel)",
+      "Anil Agarwal (Chairman, Vedanta Resources)",
+      "Pawan Goenka (Former MD, Mahindra & Mahindra)",
+      "Sanjiv Goenka (Chairman, RP-Sanjiv Goenka Group)",
+      "Chetan Bhagat (Author)",
+      "Joy Mukherjee (Actor)",
+      "Amartya Sen (Nobel Laureate in Economics - Honorary)"
+    ],
+    "images": [
+      "https://www.iitkgp.ac.in/sites/default/files/main_building.jpg",
+      "https://www.iitkgp.ac.in/sites/default/files/campus.jpg"
+    ],
+    "courses": {
+      "undergraduate": [
+        "B.Tech in Aerospace Engineering",
+        "B.Tech in Agricultural and Food Engineering",
+        "B.Tech in Biotechnology",
+        "B.Tech in Chemical Engineering",
+        "B.Tech in Civil Engineering",
+        "B.Tech in Computer Science and Engineering",
+        "B.Tech in Electrical Engineering",
+        "B.Tech in Electronics and Electrical Communication Engineering",
+        "B.Tech in Industrial and Systems Engineering",
+        "B.Tech in Instrumentation Engineering",
+        "B.Tech in Mechanical Engineering"
+      ],
+      "postgraduate": [
+        "M.Tech in various specializations",
+        "M.S. (Research)",
+        "MBA",
+        "M.Sc. in Applied Geology",
+        "M.Sc. in Chemistry",
+        "M.Sc. in Economics",
+        "M.Sc. in Mathematics",
+        "M.Sc. in Physics"
+      ],
+      "phd": [
+        "Ph.D in Engineering disciplines",
+        "Ph.D in Sciences",
+        "Ph.D in Humanities and Social Sciences",
+        "Ph.D in Management Studies"
+      ]
+    },
+    "departments": [
+      "Aerospace Engineering",
+      "Agricultural and Food Engineering",
+      "Architecture and Regional Planning",
+      "Biotechnology",
+      "Chemical Engineering",
+      "Chemistry",
+      "Civil Engineering",
+      "Computer Science and Engineering",
+      "Electrical Engineering",
+      "Electronics and Electrical Communication Engineering",
+      "Geology and Geophysics",
+      "Humanities and Social Sciences",
+      "Industrial and Systems Engineering",
+      "Mathematics",
+      "Mechanical Engineering",
+      "Metallurgical and Materials Engineering",
+      "Mining Engineering",
+      "Ocean Engineering and Naval Architecture",
+      "Physics and Meteorology"
+    ],
+    "admission": {
+      "process": "JEE Advanced for B.Tech, GATE for M.Tech, CAT for MBA",
+      "exams_accepted": ["JEE Advanced", "GATE", "CAT", "JAM", "GPAT"],
+      "eligibility": "12th with PCM for B.Tech, Graduate degree for PG programs"
+    },
+    "placements": {
+      "average_package": "₹19.50 LPA",
+      "highest_package": "₹2.05 Crore",
+      "top_recruiters": [
+        "Microsoft",
+        "Google",
+        "Amazon",
+        "Uber",
+        "Goldman Sachs",
+        "JP Morgan",
+        "Samsung",
+        "Intel",
+        "Adobe",
+        "Oracle",
+        "Flipkart",
+        "Paytm"
+      ]
+    },
+    "research": {
+      "focus_areas": [
+        "Advanced Manufacturing",
+        "Biotechnology and Medical Engineering",
+        "Energy and Environment",
+        "Information and Communication Technology",
+        "Materials Science",
+        "Ocean Engineering",
+        "Rural and Infrastructure Development"
+      ],
+      "centers": [
+        "Sponsored Research and Industrial Consultancy",
+        "Advanced Technology Development Centre",
+        "School of Medical Science and Technology",
+        "Rajendra Mishra School of Engineering Entrepreneurship"
+      ]
+    },
+    "festivals": {
+      "technical": "Kshitij - Annual techno-management festival",
+      "cultural": "Spring Fest - Cultural festival",
+      "sports": "Inter-IIT Sports Meet participation"
+    }
+  },
+  {
+    "name": "IIT Kanpur",
+    "logo": "https://th.bing.com/th/id/OSK.f02d36363ce8445d1a28c2ddff08700e?w=80&h=80&r=0&o=6&cb=B&pid=23.1",
+    "about": "Established in 1959, IIT Kanpur is renowned for its academic excellence and pioneering research. It was established with the help of nine leading American universities and has maintained its reputation as a center of excellence in engineering and technology.",
+    "established": "1959",
+    "location": "Kanpur, Uttar Pradesh",
+    "ranking": "NIRF 2024: #6 (Overall), #5 (Engineering)",
+    "website": "https://www.iitk.ac.in/",
+    "contact": {
+      "email": "registrar@iitk.ac.in",
+      "phone": "+91-512-259-7505",
+      "address": "Indian Institute of Technology Kanpur, Kanpur - 208016, Uttar Pradesh, India"
+    },
+    "campus_life": "1055-acre green campus with modern infrastructure. Strong emphasis on holistic development with numerous student activities. Active entrepreneurship ecosystem with successful startup incubation.",
+    "facilities": [
+      "P.K. Kelkar Library",
+      "Computer Center with supercomputing facility",
+      "Advanced research laboratories",
+      "Sports facilities and gymnasium",
+      "Swimming pool",
+      "Hospital and health center",
+      "Guest house facilities",
+      "Students' Activity Center",
+      "Innovation and Incubation Center",
+      "Flight Laboratory"
+    ],
+    "notable_alumni": [
+      "Deepinder Goyal (Founder, Zomato)",
+      "Bhavish Aggarwal (Co-founder, Ola)",
+      "Kunal Bahl (Co-founder, Snapdeal)",
+      "Kalyan Krishnamurthy (CEO, Flipkart)",
+      "Abhay Hanjura (Co-founder, Licious)",
+      "Manish Sabharwal (Chairman, TeamLease)",
+      "Alok Kiran (Former CEO, Indigo Airlines)"
+    ],
+    "images": [
+      "https://www.iitk.ac.in/sites/default/files/hall1.jpg",
+      "https://www.iitk.ac.in/sites/default/files/campus_aerial.jpg"
+    ],
+    "courses": {
+      "undergraduate": [
+        "B.Tech in Aerospace Engineering",
+        "B.Tech in Biological Sciences and Bioengineering",
+        "B.Tech in Chemical Engineering",
+        "B.Tech in Civil Engineering",
+        "B.Tech in Computer Science and Engineering",
+        "B.Tech in Electrical Engineering",
+        "B.Tech in Materials Science and Engineering",
+        "B.Tech in Mechanical Engineering",
+        "B.Tech in Nuclear Engineering",
+        "BS-MS Dual Degree programs"
+      ],
+      "postgraduate": [
+        "M.Tech in various specializations",
+        "M.S. (Research)",
+        "MBA",
+        "M.Des",
+        "M.Sc. in Chemistry",
+        "M.Sc. in Economics",
+        "M.Sc. in Mathematics and Scientific Computing",
+        "M.Sc. in Physics",
+        "M.Sc. in Statistics"
+      ],
+      "phd": [
+        "Ph.D in Engineering departments",
+        "Ph.D in Sciences",
+        "Ph.D in Humanities and Social Sciences",
+        "Ph.D in Management Sciences"
+      ]
+    },
+    "departments": [
+      "Aerospace Engineering",
+      "Biological Sciences and Bioengineering",
+      "Chemical Engineering",
+      "Chemistry",
+      "Civil Engineering",
+      "Computer Science and Engineering",
+      "Design Programme",
+      "Earth Sciences",
+      "Economics",
+      "Electrical Engineering",
+      "Humanities and Social Sciences",
+      "Industrial and Management Engineering",
+      "Materials Science and Engineering",
+      "Mathematics and Statistics",
+      "Mechanical Engineering",
+      "Nuclear Engineering",
+      "Physics"
+    ],
+    "admission": {
+      "process": "JEE Advanced for B.Tech, GATE for M.Tech, CAT for MBA",
+      "exams_accepted": ["JEE Advanced", "GATE", "CAT", "CEED", "JAM"],
+      "eligibility": "12th with PCM for B.Tech, Bachelor's degree for PG programs"
+    },
+    "placements": {
+      "average_package": "₹26.95 LPA",
+      "highest_package": "₹1.68 Crore",
+      "top_recruiters": [
+        "Microsoft",
+        "Google",
+        "Amazon",
+        "Uber",
+        "Goldman Sachs",
+        "American Express",
+        "Samsung",
+        "Adobe",
+        "Qualcomm",
+        "Intel",
+        "DE Shaw",
+        "Two Sigma"
+      ]
+    },
+    "research": {
+      "focus_areas": [
+        "Aerospace Engineering",
+        "Artificial Intelligence and Machine Learning",
+        "Biotechnology",
+        "Clean Energy",
+        "Materials Science",
+        "Nanotechnology",
+        "Space Technology"
+      ],
+      "centers": [
+        "National Wind Tunnel Facility",
+        "Centre for Entrepreneurship",
+        "Advanced Centre for Materials Science",
+        "Centre for Lasers and Photonics"
+      ]
+    },
+    "festivals": {
+      "technical": "Techkriti - Annual technical and entrepreneurship festival",
+      "cultural": "Antaragni - Cultural festival",
+      "sports": "Udghosh - Annual sports festival"
+    }
+  },
+  {
+    "name": "IIT Roorkee",
+    "logo": "https://th.bing.com/th/id/OSK.JvvAzGAyASAZFhv4LaQtqmloNfN8iqjl1spOeXrX3fw?w=80&h=80&r=0&o=6&cb=B&pid=23.1",
+    "about": "Established in 1847 as Thomason College of Civil Engineering, IIT Roorkee is India's oldest technical institution. It became an IIT in 2001 and is renowned for its engineering education, particularly in civil engineering and related fields.",
+    "established": "1847 (IIT status: 2001)",
+    "location": "Roorkee, Uttarakhand",
+    "ranking": "NIRF 2024: #7 (Overall), #6 (Engineering)",
+    "website": "https://www.iitr.ac.in/",
+    "contact": {
+      "email": "registrar@iitr.ac.in",
+      "phone": "+91-1332-285311",
+      "address": "Indian Institute of Technology Roorkee, Roorkee - 247667, Uttarakhand, India"
+    },
+    "campus_life": "365-acre historic campus with colonial architecture and modern facilities. Rich heritage spanning over 175 years. Peaceful environment conducive to learning with active student community.",
+    "facilities": [
+      "Central Library with extensive collection",
+      "Advanced laboratories and research centers",
+      "Computer Centre",
+      "Sports facilities",
+      "Swimming pool",
+      "Medical facilities",
+      "Guest houses",
+      "Students' clubs and recreation center",
+      "Innovation and Entrepreneurship Development Centre",
+      "Continuing Education Centre"
+    ],
+    "notable_alumni": [
+      "Satya Nadella (CEO, Microsoft)",
+      "Vineet Nayar (Former CEO, HCL Technologies)",
+      "Arjun Munda (Former Chief Minister, Jharkhand)",
+      "George Everest (Surveyor General of India)",
+      "Krishna Chandra Pant (Former Union Minister)",
+      "B.C. Joshi (Former Chief Minister, Uttarakhand)",
+      "Harbhajan Singh (Former Test Cricketer)"
+    ],
+    "images": [
+      "https://www.iitr.ac.in/sites/default/files/main_building.jpg",
+      "https://www.iitr.ac.in/sites/default/files/campus_heritage.jpg"
+    ],
+    "courses": {
+      "undergraduate": [
+        "B.Tech in Architecture and Planning",
+        "B.Tech in Biotechnology",
+        "B.Tech in Chemical Engineering",
+        "B.Tech in Civil Engineering",
+        "B.Tech in Computer Science and Engineering",
+        "B.Tech in Electrical Engineering",
+        "B.Tech in Electronics and Communication Engineering",
+        "B.Tech in Geological Technology",
+        "B.Tech in Mechanical Engineering",
+        "B.Tech in Metallurgical and Materials Engineering"
+      ],
+      "postgraduate": [
+        "M.Tech in various specializations",
+        "M.S. (Research)",
+        "MBA",
+        "M.Arch",
+        "M.Plan",
+        "M.Sc. in Applied Mathematics",
+        "M.Sc. in Applied Physics",
+        "M.Sc. in Chemistry"
+      ],
+      "phd": [
+        "Ph.D in Engineering disciplines",
+        "Ph.D in Sciences",
+        "Ph.D in Architecture and Planning",
+        "Ph.D in Management Studies"
+      ]
+    },
+    "departments": [
+      "Architecture and Planning",
+      "Biotechnology",
+      "Chemical Engineering",
+      "Chemistry",
+      "Civil Engineering",
+      "Computer Science and Engineering",
+      "Earth Sciences",
+      "Electrical Engineering",
+      "Electronics and Communication Engineering",
+      "Humanities and Social Sciences",
+      "Hydrology",
+      "Management Studies",
+      "Mathematics",
+      "Mechanical and Industrial Engineering",
+      "Metallurgical and Materials Engineering",
+      "Paper Technology",
+      "Physics",
+      "Polymer Science and Technology"
+    ],
+    "admission": {
+      "process": "JEE Advanced for B.Tech, GATE for M.Tech, CAT for MBA",
+      "exams_accepted": ["JEE Advanced", "GATE", "CAT", "CEED"],
+      "eligibility": "12th with PCM for B.Tech, Bachelor's degree for PG programs"
+    },
+    "placements": {
+      "average_package": "₹17.35 LPA",
+      "highest_package": "₹1.10 Crore",
+      "top_recruiters": [
+        "Microsoft",
+        "Amazon",
+        "Google",
+        "Adobe",
+        "Goldman Sachs",
+        "Samsung",
+        "Oracle",
+        "Flipkart",
+        "Paytm",
+        "Bajaj Auto",
+        "L&T",
+        "ISRO"
+      ]
+    },
+    "research": {
+      "focus_areas": [
+        "Civil and Environmental Engineering",
+        "Water Resources Management",
+        "Earthquake Engineering",
+        "Renewable Energy",
+        "Materials Science",
+        "Biotechnology",
+        "Information Technology"
+      ],
+      "centers": [
+        "Alternate Hydro Energy Centre",
+        "Centre of Excellence in Disaster Mitigation and Management",
+        "Advanced Materials Research Centre",
+        "Innovation and Entrepreneurship Development Centre"
+      ]
+    },
+    "festivals": {
+      "technical": "Cognizance - Annual technical festival",
+      "cultural": "Thomso - Cultural festival",
+      "sports": "Inter-IIT Sports Meet participation"
+    }
+  },
+  {
+    "name": "IIT Guwahati",
+    "logo": "https://th.bing.com/th/id/OSK.cOpcYfAGW91JVGRqKio7I00n5tfK0Qbwg0MUMymbERQ?w=80&h=80&r=0&o=6&cb=B&pid=23.1",
+    "about": "Established in 1994, IIT Guwahati is the youngest among the older IITs and has rapidly established itself as a premier institution. Located in the scenic hills of North Guwahati, it is known for its modern curriculum and research excellence.",
+    "established": "1994",
+    "location": "Guwahati, Assam",
+    "ranking": "NIRF 2024: #7 (Overall), #7 (Engineering)",
+    "website": "https://www.iitg.ac.in/",
+    "contact": {
+      "email": "registrar@iitg.ac.in",
+      "phone": "+91-361-258-2000",
+      "address": "Indian Institute of Technology Guwahati, Guwahati - 781039, Assam, India"
+    },
+    "campus_life": "285-acre picturesque campus surrounded by hills and the Brahmaputra river. Modern infrastructure with focus on sustainable development. Vibrant student life with cultural diversity representing Northeast India.",
+    "facilities": [
+      "Central Library with digital resources",
+      "Advanced research laboratories",
+      "Computer Centre",
+      "Sports complex and gymnasium",
+      "Swimming pool",
+      "Health centre",
+      "Convention centre",
+      "Guest house",
+      "Technology Incubation Centre",
+      "Central Instrument Facility"
+    ],
+    "notable_alumni": [
+      "Rajan Anandan (Former VP, Google India)",
+      "Ritesh Agarwal (Founder, OYO)",
+      "Gaurav Munjal (Co-founder, Unacademy)",
+      "Hemant Mohapatra (Partner, Lightspeed Venture Partners)",
+      "Aloke Bajpai (Co-founder, ixigo)",
+      "Sameer Nigam (CEO, PhonePe)",
+      "Phanindra Sama (Co-founder, redBus)"
+    ],
+    "images": [
+      "https://www.iitg.ac.in/sites/default/files/main_building.jpg",
+      "https://www.iitg.ac.in/sites/default/files/campus_hills.jpg"
+    ],
+    "courses": {
+      "undergraduate": [
+        "B.Tech in Biotechnology",
+        "B.Tech in Chemical Engineering",
+        "B.Tech in Civil Engineering",
+        "B.Tech in Computer Science and Engineering",
+        "B.Tech in Electronics and Electrical Engineering",
+        "B.Tech in Mechanical Engineering",
+        "B.Des in Design",
+        "BS-MS Dual Degree programs"
+      ],
+      "postgraduate": [
+        "M.Tech in various specializations",
+        "M.S. (Research)",
+        "MBA",
+        "M.Des",
+        "M.Sc. in Applied Mathematics",
+        "M.Sc. in Chemistry",
+        "M.Sc. in Physics"
+      ],
+      "phd": [
+        "Ph.D in Engineering departments",
+        "Ph.D in Sciences",
+        "Ph.D in Humanities and Social Sciences",
+        "Ph.D in Design"
+      ]
+    },
+    "departments": [
+      "Biosciences and Bioengineering",
+      "Chemical Engineering",
+      "Chemistry",
+      "Civil Engineering",
+      "Computer Science and Engineering",
+      "Design",
+      "Electronics and Electrical Engineering",
+      "Humanities and Social Sciences",
+      "Mathematics",
+      "Mechanical Engineering",
+      "Physics"
+    ],
+    "admission": {
+      "process": "JEE Advanced for B.Tech, GATE for M.Tech, CAT for MBA",
+      "exams_accepted": ["JEE Advanced", "GATE", "CAT", "CEED", "UCEED"],
+      "eligibility": "12th with PCM for B.Tech, Bachelor's degree for PG programs"
+    },
+    "placements": {
+      "average_package": "₹15.50 LPA",
+      "highest_package": "₹1.20 Crore",
+      "top_recruiters": [
+        "Microsoft",
+        "Google",
+        "Amazon",
+        "Samsung",
+        "Adobe",
+        "Goldman Sachs",
+        "Oracle",
+        "Flipkart",
+        "Uber",
+        "JP Morgan",
+        "American Express",
+        "Intel"
+      ]
+    },
+    "research": {
+      "focus_areas": [
+        "Biotechnology and Bioengineering",
+        "Nanotechnology",
+        "Water and Environment",
+        "Energy",
+        "Advanced Materials",
+        "Information Technology",
+        "Design and Innovation"
+      ],
+      "centers": [
+        "Centre for the Environment",
+        "Centre for Nanotechnology",
+        "Technology Incubation Centre",
+        "Skill Development Centre"
+      ]
+    },
+    "festivals": {
+      "technical": "Techniche - Annual technical festival",
+      "cultural": "Alcheringa - Cultural festival",
+      "sports": "Inter-IIT Sports Meet participation"
+    }
+  },
+  {
+    "name": "IIT Hyderabad",
+    "logo": "https://th.bing.com/th/id/OSK.rzeb2aA4lPXlGVKvgMW9zD8N_ak9iNytgqMzRlzAwI0?w=80&h=80&r=0&o=6&cb=B&pid=23.1",
+    "about": "Established in 2008, IIT Hyderabad is one of the newer IITs but has quickly gained recognition for its innovative approach to education and research. It emphasizes interdisciplinary learning and has modern infrastructure.",
+    "established": "2008",
+    "location": "Hyderabad, Telangana",
+    "ranking": "NIRF 2024: #8 (Overall), #8 (Engineering)",
+    "website": "https://www.iith.ac.in/",
+    "contact": {
+      "email": "registrar@iith.ac.in",
+      "phone": "+91-40-2301-6000",
+      "address": "Indian Institute of Technology Hyderabad, Kandi, Sangareddy - 502285, Telangana, India"
+    },
+    "campus_life": "576-acre modern campus with state-of-the-art facilities. Emphasis on sustainable development and green initiatives. Young and dynamic student community with focus on innovation and entrepreneurship.",
+    "facilities": [
+      "Modern library with digital collections",
+      "Advanced research laboratories",
+      "High-performance computing facility",
+      "Sports facilities",
+      "Swimming pool",
+      "Health center",
+      "Convention center",
+      "Innovation labs",
+      "Incubation center",
+      "Guest house facilities"
+    ],
+    "notable_alumni": [
+      "Srikanth Velamakanni (Co-founder, Fractal Analytics)",
+      "Varun Mayya (Co-founder, Avalon Labs)",
+      "Rohit Chennamaneni (Co-founder, Darwinbox)",
+      "Kiran Vendra (Co-founder, MindTickle)",
+      "Saurabh Jain (Co-founder, Rentomojo)",
+      "Ashish Hemrajani (Founder, BookMyShow)",
+      "Various startup founders and tech leaders"
+    ],
+    "images": [
+      "https://www.iith.ac.in/sites/default/files/main_building.jpg",
+      "https://www.iith.ac.in/sites/default/files/campus_modern.jpg"
+    ],
+    "courses": {
+      "undergraduate": [
+        "B.Tech in Biotechnology",
+        "B.Tech in Chemical Engineering",
+        "B.Tech in Civil Engineering",
+        "B.Tech in Computer Science and Engineering",
+        "B.Tech in Electrical Engineering",
+        "B.Tech in Engineering Physics",
+        "B.Tech in Materials Science and Metallurgical Engineering",
+        "B.Tech in Mechanical and Aerospace Engineering",
+        "B.Des in Design"
+      ],
+      "postgraduate": [
+        "M.Tech in various specializations",
+        "M.S. (Research)",
+        "MBA",
+        "M.Des",
+        "M.Sc. in Chemistry",
+        "M.Sc. in Mathematics and Computing",
+        "M.Sc. in Physics"
+      ],
+      "phd": [
+        "Ph.D in Engineering departments",
+        "Ph.D in Sciences",
+        "Ph.D in Liberal Arts",
+        "Ph.D in Design"
+      ]
+    },
+    "departments": [
+      "Biotechnology",
+      "Chemical Engineering",
+      "Chemistry",
+      "Civil Engineering",
+      "Computer Science and Engineering",
+      "Design",
+      "Electrical Engineering",
+      "Liberal Arts",
+      "Materials Science and Metallurgical Engineering",
+      "Mathematics and Statistics",
+      "Mechanical and Aerospace Engineering",
+      "Physics"
+    ],
+    "admission": {
+      "process": "JEE Advanced for B.Tech, GATE for M.Tech, CAT for MBA",
+      "exams_accepted": ["JEE Advanced", "GATE", "CAT", "CEED", "UCEED"],
+      "eligibility": "12th with PCM for B.Tech, Bachelor's degree for PG programs"
+    },
+    "placements": {
+      "average_package": "₹13.50 LPA",
+      "highest_package": "₹1.05 Crore",
+      "top_recruiters": [
+        "Microsoft",
+        "Google",
+        "Amazon",
+        "Goldman Sachs",
+        "Samsung",
+        "Adobe",
+        "Intel",
+        "Qualcomm",
+        "Oracle",
+        "Flipkart",
+        "American Express",
+        "JP Morgan"
+      ]
+    },
+    "research": {
+      "focus_areas": [
+        "Artificial Intelligence and Machine Learning",
+        "Biotechnology",
+        "Clean Energy",
+        "Advanced Materials",
+        "Sustainable Development",
+        "Aerospace Engineering",
+        "Climate Change"
+      ],
+      "centers": [
+        "Centre for Interdisciplinary Programs",
+        "Technology Incubation Hub",
+        "Centre for Healthcare Entrepreneurship",
+        "Centre for Earthquake Engineering"
+      ]
+    },
+    "festivals": {
+      "technical": "Elan & nVision - Technical and entrepreneurship festival",
+      "cultural": "Malhar - Cultural festival",
+      "sports": "Samar - Sports festival"
+    }
+  },
+  {
+    "name": "IIT BHU",
+    "logo": "https://th.bing.com/th/id/OSK.WxeI3_Od8XOQjS5W2b2QXoEoGRBudHJE8IbpaznpJvw?w=80&h=80&r=0&o=6&cb=B&pid=23.1",
+    "about": "Originally established as Banaras Engineering College in 1919, it became IIT (BHU) in 2012. Located within Banaras Hindu University campus, it combines rich heritage with modern engineering education.",
+    "established": "1919 (IIT status: 2012)",
+    "location": "Varanasi, Uttar Pradesh",
+    "ranking": "NIRF 2024: #10 (Overall), #9 (Engineering)",
+    "website": "https://www.iitbhu.ac.in/",
+    "contact": {
+      "email": "registrar.itbhu@itbhu.ac.in",
+      "phone": "+91-542-716-8114",
+      "address": "Indian Institute of Technology (BHU), Varanasi - 221005, Uttar Pradesh, India"
+    },
+    "campus_life": "Part of the historic BHU campus spread over 1300 acres. Rich cultural heritage with spiritual atmosphere. Diverse student community with strong emphasis on holistic development.",
+    "facilities": [
+      "Central Library",
+      "Advanced laboratories",
+      "Computer centre",
+      "Sports facilities",
+      "Swimming pool",
+      "Health centre",
+      "Heritage buildings",
+      "Research centres",
+      "Innovation and incubation facilities",
+      "Auditoriums and seminar halls"
+    ],
+    "notable_alumni": [
+      "Shanti Swarup Bhatnagar (Scientist)",
+      "Homi Bhabha (Nuclear Physicist)",
+      "Jagadish Chandra Bose (Physicist)",
+      "C.V. Raman (Nobel Laureate in Physics)",
+      "Various industrialists and government officials",
+      "Tech entrepreneurs and startup founders",
+      "Academic leaders and researchers"
+    ],
+    "images": [
+      "https://www.iitbhu.ac.in/sites/default/files/main_gate.jpg",
+      "https://www.iitbhu.ac.in/sites/default/files/heritage_building.jpg"
+    ],
+    "courses": {
+      "undergraduate": [
+        "B.Tech in Biotechnology",
+        "B.Tech in Ceramic Engineering",
+        "B.Tech in Chemical Engineering",
+        "B.Tech in Civil Engineering",
+        "B.Tech in Computer Science and Engineering",
+        "B.Tech in Electrical Engineering",
+        "B.Tech in Electronics Engineering",
+        "B.Tech in Mechanical Engineering",
+        "B.Tech in Metallurgical Engineering",
+        "B.Tech in Mining Engineering"
+      ],
+      "postgraduate": [
+        "M.Tech in various specializations",
+        "M.S. (Research)",
+        "MBA",
+        "M.Sc. in Applied Mathematics",
+        "M.Sc. in Applied Physics",
+        "M.Sc. in Chemistry"
+      ],
+      "phd": [
+        "Ph.D in Engineering disciplines",
+        "Ph.D in Sciences",
+        "Ph.D in Humanities and Social Sciences"
+      ]
+    },
+    "departments": [
+      "Ceramic Engineering",
+      "Chemical Engineering and Technology",
+      "Chemistry",
+      "Civil Engineering",
+      "Computer Science and Engineering",
+      "Electrical Engineering",
+      "Electronics Engineering",
+      "Humanities and Social Sciences",
+      "Mathematics and Statistics",
+      "Mechanical Engineering",
+      "Metallurgical Engineering",
+      "Mining Engineering",
+      "Physics"
+    ],
+    "admission": {
+      "process": "JEE Advanced for B.Tech, GATE for M.Tech, CAT for MBA",
+      "exams_accepted": ["JEE Advanced", "GATE", "CAT", "JAM"],
+      "eligibility": "12th with PCM for B.Tech, Bachelor's degree for PG programs"
+    },
+    "placements": {
+      "average_package": "₹12.50 LPA",
+      "highest_package": "₹58.0 LPA",
+      "top_recruiters": [
+        "Microsoft",
+        "Amazon",
+        "Google",
+        "Adobe",
+        "Samsung",
+        "Intel",
+        "Oracle",
+        "Flipkart",
+        "Goldman Sachs",
+        "American Express",
+        "L&T",
+        "ISRO"
+      ]
+    },
+    "research": {
+      "focus_areas": [
+        "Materials Science and Engineering",
+        "Mining and Mineral Engineering",
+        "Information Technology",
+        "Biotechnology",
+        "Energy and Environment",
+        "Advanced Manufacturing",
+        "Heritage Conservation"
+      ],
+      "centers": [
+        "Centre of Advanced Study in Mining Engineering",
+        "Sponsored Research and Industrial Consultancy",
+        "Innovation and Entrepreneurship Cell",
+        "Centre for Materials Science and Technology"
+      ]
+    },
+    "festivals": {
+      "technical": "Kashiyatra - Technical festival",
+      "cultural": "Spardha - Cultural and sports festival",
+      "sports": "Inter-IIT participation"
+    }
+  },
+  {
+    "name": "IIT Indore",
+    "logo": "https://th.bing.com/th/id/OSK.e7cdHF1xcUt5hIm4Laa4cT6IeJE3FnC0Luk04WEgQhk?w=80&h=80&r=0&o=6&cb=B&pid=23.1",
+    "about": "Established in 2009, IIT Indore is one of the newer IITs that has rapidly grown in stature. Known for its innovative curriculum, modern infrastructure, and strong industry connections in central India.",
+    "established": "2009",
+    "location": "Indore, Madhya Pradesh",
+    "ranking": "NIRF 2024: #11 (Overall), #10 (Engineering)",
+    "website": "https://www.iiti.ac.in/",
+    "contact": {
+      "email": "registrar@iiti.ac.in",
+      "phone": "+91-731-660-3200",
+      "address": "Indian Institute of Technology Indore, Khandwa Road, Simrol, Indore - 453552, Madhya Pradesh, India"
+    },
+    "campus_life": "501-acre modern campus with sustainable design principles. Young and vibrant atmosphere with focus on innovation and research. Growing alumni network and strong industry partnerships.",
+    "facilities": [
+      "Modern library with digital resources",
+      "State-of-the-art laboratories",
+      "Computer center",
+      "Sports complex",
+      "Swimming pool",
+      "Health center",
+      "Auditoriums",
+      "Innovation labs",
+      "Incubation facilities",
+      "Guest house"
+    ],
+    "notable_alumni": [
+      "Emerging entrepreneurs in tech sector",
+      "Research scholars in leading institutions",
+      "Industry professionals in major companies",
+      "Startupreneurs in various domains",
+      "Government service officers",
+      "Academic leaders",
+      "Innovation and technology leaders"
+    ],
+    "images": [
+      "https://www.iiti.ac.in/sites/default/files/campus_view.jpg",
+      "https://www.iiti.ac.in/sites/default/files/main_building.jpg"
+    ],
+    "courses": {
+      "undergraduate": [
+        "B.Tech in Biotechnology",
+        "B.Tech in Chemical Engineering",
+        "B.Tech in Civil Engineering",
+        "B.Tech in Computer Science and Engineering",
+        "B.Tech in Electrical Engineering",
+        "B.Tech in Mechanical Engineering",
+        "B.Tech in Metallurgical Engineering and Materials Science"
+      ],
+      "postgraduate": [
+        "M.Tech in various specializations",
+        "M.S. (Research)",
+        "MBA",
+        "M.Sc. in Applied Mathematics",
+        "M.Sc. in Chemistry",
+        "M.Sc. in Physics"
+      ],
+      "phd": [
+        "Ph.D in Engineering departments",
+        "Ph.D in Sciences",
+        "Ph.D in Humanities and Social Sciences"
+      ]
+    },
+    "departments": [
+      "Biosciences and Biomedical Engineering",
+      "Chemical Engineering",
+      "Chemistry",
+      "Civil Engineering",
+      "Computer Science and Engineering",
+      "Electrical Engineering",
+      "Humanities and Social Sciences",
+      "Mathematics",
+      "Mechanical Engineering",
+      "Metallurgical Engineering and Materials Science",
+      "Physics"
+    ],
+    "admission": {
+      "process": "JEE Advanced for B.Tech, GATE for M.Tech, CAT for MBA",
+      "exams_accepted": ["JEE Advanced", "GATE", "CAT", "JAM"],
+      "eligibility": "12th with PCM for B.Tech, Bachelor's degree for PG programs"
+    },
+    "placements": {
+      "average_package": "₹11.50 LPA",
+      "highest_package": "₹48.0 LPA",
+      "top_recruiters": [
+        "Microsoft",
+        "Amazon",
+        "Google",
+        "Samsung",
+        "Adobe",
+        "Intel",
+        "Oracle",
+        "Flipkart",
+        "American Express",
+        "Goldman Sachs",
+        "L&T",
+        "TCS"
+      ]
+    },
+    "research": {
+      "focus_areas": [
+        "Artificial Intelligence and Data Science",
+        "Biotechnology and Biomedical Engineering",
+        "Advanced Materials",
+        "Clean Energy",
+        "Environmental Engineering",
+        "Smart Manufacturing",
+        "Sustainable Development"
+      ],
+      "centers": [
+        "Centre for Innovation and Entrepreneurship",
+        "Advanced Materials Research Centre",
+        "Centre for Biosciences and Biomedical Engineering",
+        "Technology Business Incubator"
+      ]
+    },
+    "festivals": {
+      "technical": "Fluxus - Technical festival",
+      "cultural": "Rangtarang - Cultural festival",
+      "sports": "Aavhan - Sports festival"
+    }
+  }
+]

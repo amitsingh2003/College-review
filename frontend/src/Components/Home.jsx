@@ -1,12 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { Search } from "lucide-react";
 
+import CollegeDetails from "./CollegeDetails";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
-  // Animated text options - only the changing part
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const navigate = useNavigate();
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/colleges/${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
+
   const animatedTexts = [
     "Latest News & Updates",
     "India's Top Colleges",
@@ -16,7 +27,6 @@ const Home = () => {
     "Scholarship Opportunities",
   ];
 
-  // Background images for college/education theme
   const backgroundImages = [
     "https://images.unsplash.com/photo-1618255630366-f402c45736f6?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1543193158-07c01963e800?q=80&w=2065&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -37,7 +47,12 @@ const Home = () => {
     "https://images.unsplash.com/photo-1643479228289-938bb58e867c?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ];
 
-  // Text animation effect with smoother transitions
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleSearch(e);
+    }
+  };
+
   useEffect(() => {
     const textInterval = setInterval(() => {
       setIsVisible(false);
@@ -50,7 +65,6 @@ const Home = () => {
     return () => clearInterval(textInterval);
   }, []);
 
-  // Background image animation
   useEffect(() => {
     const imageInterval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % backgroundImages.length);
@@ -59,7 +73,6 @@ const Home = () => {
     return () => clearInterval(imageInterval);
   }, []);
 
-  // Animated stats with counters
   const [stats, setStats] = useState({
     colleges: 0,
     reviews: 0,
@@ -184,6 +197,9 @@ const Home = () => {
             />
             <input
               type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyPress={handleKeyPress}
               placeholder="Search colleges, exams, courses..."
               className="w-full pl-14 pr-8 py-4 text-base text-white bg-white/10 rounded-full outline-none 
       transition-all duration-300 backdrop-blur-xl placeholder:text-white/60
@@ -196,10 +212,10 @@ const Home = () => {
         </div>
 
         {/* Compact Animated Stats Grid - Made Slightly Larger */}
-       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
-  <div className="text-center group cursor-pointer">
-    <div
-      className="bg-white/5 backdrop-blur-2xl rounded-2xl p-4 md:p-5
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
+          <div className="text-center group cursor-pointer">
+            <div
+              className="bg-white/5 backdrop-blur-2xl rounded-2xl p-4 md:p-5
       shadow-[inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_0_rgba(255,255,255,0.05),0_20px_25px_-5px_rgba(0,0,0,0.4),0_10px_10px_-5px_rgba(0,0,0,0.04)]
       border-[0.5px] border-white/10
       hover:shadow-[inset_0_2px_0_rgba(255,255,255,0.15),inset_0_-2px_0_rgba(255,255,255,0.08),0_25px_50px_-12px_rgba(0,0,0,0.5),0_0_0_1px_rgba(255,255,255,0.05)]
@@ -208,17 +224,19 @@ const Home = () => {
       relative overflow-hidden
       before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:via-transparent before:to-transparent before:opacity-0 before:transition-opacity before:duration-500
       hover:before:opacity-100"
-    >
-      <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-2 group-hover:text-blue-300 transition-colors duration-300 drop-shadow-lg">
-        {stats.colleges.toLocaleString()}+
-      </div>
-      <div className="text-white/70 font-medium text-sm tracking-wide">Colleges</div>
-    </div>
-  </div>
+            >
+              <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-2 group-hover:text-blue-300 transition-colors duration-300 drop-shadow-lg">
+                {stats.colleges.toLocaleString()}+
+              </div>
+              <div className="text-white/70 font-medium text-sm tracking-wide">
+                Colleges
+              </div>
+            </div>
+          </div>
 
-  <div className="text-center group cursor-pointer">
-    <div
-      className="bg-white/5 backdrop-blur-2xl rounded-2xl p-4 md:p-5
+          <div className="text-center group cursor-pointer">
+            <div
+              className="bg-white/5 backdrop-blur-2xl rounded-2xl p-4 md:p-5
       shadow-[inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_0_rgba(255,255,255,0.05),0_20px_25px_-5px_rgba(0,0,0,0.4),0_10px_10px_-5px_rgba(0,0,0,0.04)]
       border-[0.5px] border-white/10
       hover:shadow-[inset_0_2px_0_rgba(255,255,255,0.15),inset_0_-2px_0_rgba(255,255,255,0.08),0_25px_50px_-12px_rgba(0,0,0,0.5),0_0_0_1px_rgba(255,255,255,0.05)]
@@ -227,17 +245,19 @@ const Home = () => {
       relative overflow-hidden
       before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:via-transparent before:to-transparent before:opacity-0 before:transition-opacity before:duration-500
       hover:before:opacity-100"
-    >
-      <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors duration-300 drop-shadow-lg">
-        {stats.reviews.toLocaleString()}+
-      </div>
-      <div className="text-white/70 font-medium text-sm tracking-wide">Reviews</div>
-    </div>
-  </div>
+            >
+              <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors duration-300 drop-shadow-lg">
+                {stats.reviews.toLocaleString()}+
+              </div>
+              <div className="text-white/70 font-medium text-sm tracking-wide">
+                Reviews
+              </div>
+            </div>
+          </div>
 
-  <div className="text-center group cursor-pointer">
-    <div
-      className="bg-white/5 backdrop-blur-2xl rounded-2xl p-4 md:p-5
+          <div className="text-center group cursor-pointer">
+            <div
+              className="bg-white/5 backdrop-blur-2xl rounded-2xl p-4 md:p-5
       shadow-[inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_0_rgba(255,255,255,0.05),0_20px_25px_-5px_rgba(0,0,0,0.4),0_10px_10px_-5px_rgba(0,0,0,0.04)]
       border-[0.5px] border-white/10
       hover:shadow-[inset_0_2px_0_rgba(255,255,255,0.15),inset_0_-2px_0_rgba(255,255,255,0.08),0_25px_50px_-12px_rgba(0,0,0,0.5),0_0_0_1px_rgba(255,255,255,0.05)]
@@ -246,17 +266,19 @@ const Home = () => {
       relative overflow-hidden
       before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:via-transparent before:to-transparent before:opacity-0 before:transition-opacity before:duration-500
       hover:before:opacity-100"
-    >
-      <div className="text-2xl md:text-3xl font-bold text-indigo-400 mb-2 group-hover:text-indigo-300 transition-colors duration-300 drop-shadow-lg">
-        {stats.exams}+
-      </div>
-      <div className="text-white/70 font-medium text-sm tracking-wide">Exams</div>
-    </div>
-  </div>
+            >
+              <div className="text-2xl md:text-3xl font-bold text-indigo-400 mb-2 group-hover:text-indigo-300 transition-colors duration-300 drop-shadow-lg">
+                {stats.exams}+
+              </div>
+              <div className="text-white/70 font-medium text-sm tracking-wide">
+                Exams
+              </div>
+            </div>
+          </div>
 
-  <div className="text-center group cursor-pointer">
-    <div
-      className="bg-white/5 backdrop-blur-2xl rounded-2xl p-4 md:p-5
+          <div className="text-center group cursor-pointer">
+            <div
+              className="bg-white/5 backdrop-blur-2xl rounded-2xl p-4 md:p-5
       shadow-[inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_0_rgba(255,255,255,0.05),0_20px_25px_-5px_rgba(0,0,0,0.4),0_10px_10px_-5px_rgba(0,0,0,0.04)]
       border-[0.5px] border-white/10
       hover:shadow-[inset_0_2px_0_rgba(255,255,255,0.15),inset_0_-2px_0_rgba(255,255,255,0.08),0_25px_50px_-12px_rgba(0,0,0,0.5),0_0_0_1px_rgba(255,255,255,0.05)]
@@ -265,14 +287,16 @@ const Home = () => {
       relative overflow-hidden
       before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:via-transparent before:to-transparent before:opacity-0 before:transition-opacity before:duration-500
       hover:before:opacity-100"
-    >
-      <div className="text-2xl md:text-3xl font-bold text-purple-400 mb-2 group-hover:text-purple-300 transition-colors duration-300 drop-shadow-lg">
-        {stats.courses}+
-      </div>
-      <div className="text-white/70 font-medium text-sm tracking-wide">Courses</div>
-    </div>
-  </div>
-</div>
+            >
+              <div className="text-2xl md:text-3xl font-bold text-purple-400 mb-2 group-hover:text-purple-300 transition-colors duration-300 drop-shadow-lg">
+                {stats.courses}+
+              </div>
+              <div className="text-white/70 font-medium text-sm tracking-wide">
+                Courses
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

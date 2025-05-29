@@ -16,6 +16,9 @@ import {
   Sparkles,
 } from "lucide-react";
 import logo from "../assets/logo.png";
+import { useNavigate } from "react-router-dom";
+import collegeData from "../assets/College.json";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,6 +26,19 @@ const Navbar = () => {
   const [discoverDropdown, setDiscoverDropdown] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchFocused, setSearchFocused] = useState(false);
+
+  const navigate = useNavigate();
+  const handleCollegeClick = (collegeName) => {
+    const college = collegeData.find(
+      (college) => college.name.toLowerCase() === collegeName.toLowerCase()
+    );
+    if (college) {
+      // Create a URL-friendly slug from college name
+      const collegeSlug = college.name.toLowerCase().replace(/\s+/g, "-");
+      navigate(`/college/${collegeSlug}`, { state: { collegeData: college } });
+      setExploreDropdown(false); // Close dropdown
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,10 +85,10 @@ const Navbar = () => {
 
   const collegesData = [
     {
-      name: "IIT Mumbai",
-      location: "Bangalore",
-      rating: "9.2",
-      fees: "₹2.5L",
+      name: "IIT Madras",
+      location: "Chennai",
+      rating: "9.6",
+      fees: "₹2.3L",
     },
     {
       name: "IIT Delhi",
@@ -83,14 +99,50 @@ const Navbar = () => {
     {
       name: "IIT Bombay",
       location: "Mumbai",
-      rating: "9.3",
+      rating: "9.5",
       fees: "₹2.7L",
+    },
+    {
+      name: "IIT Kharagpur",
+      location: "Kharagpur",
+      rating: "9.2",
+      fees: "₹2.5L",
     },
     {
       name: "IIT Kanpur",
       location: "Kanpur",
+      rating: "9.3",
+      fees: "₹2.4L",
+    },
+    {
+      name: "IIT Roorkee",
+      location: "Roorkee",
       rating: "9.1",
       fees: "₹2.4L",
+    },
+    {
+      name: "IIT Guwahati",
+      location: "Guwahati",
+      rating: "9.0",
+      fees: "₹2.3L",
+    },
+    {
+      name: "IIT Hyderabad",
+      location: "Hyderabad",
+      rating: "8.9",
+      fees: "₹2.2L",
+    },
+    {
+      name: "IIT BHU",
+      location: "Varanasi",
+      rating: "8.8",
+      fees: "₹2.2L",
+    },
+    {
+      name: "IIT Indore",
+      location: "Indore",
+      rating: "8.7",
+      fees: "₹2.1L",
     },
   ];
 
@@ -159,13 +211,14 @@ const Navbar = () => {
                       e.target.style.display = "none";
                     }}
                   />
-                  <span
+                  <Link
+                    to="/"
                     className={`text-sm sm:text-lg lg:text-xl font-extrabold transition-all duration-500 ${
                       isScrolled ? "text-blue-500" : "text-white"
                     }`}
                   >
                     SCS GLOBAL
-                  </span>
+                  </Link>
                 </div>
               </div>
 
@@ -266,15 +319,19 @@ const Navbar = () => {
                                   {collegesData.map((college, index) => (
                                     <div
                                       key={index}
+                                      onClick={() =>
+                                        handleCollegeClick(college.name)
+                                      }
                                       className="group/college p-4 rounded-2xl cursor-pointer transition-all duration-300 ease-out
-                        hover:bg-gradient-to-br hover:from-white/80 hover:via-white/60 hover:to-white/70
-                        hover:shadow-[0_12px_40px_rgba(16,185,129,0.12),inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.5)]
-                        hover:scale-[1.02] hover:backdrop-blur-xl
-                        active:scale-[0.98] active:shadow-[0_6px_20px_rgba(16,185,129,0.08)]
-                        relative overflow-hidden
-                        before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-transparent before:via-white/30 before:to-transparent before:opacity-0 before:transition-opacity before:duration-300
-                        hover:before:opacity-100"
+      hover:bg-gradient-to-br hover:from-white/80 hover:via-white/60 hover:to-white/70
+      hover:shadow-[0_12px_40px_rgba(16,185,129,0.12),inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(255,255,255,0.5)]
+      hover:scale-[1.02] hover:backdrop-blur-xl
+      active:scale-[0.98] active:shadow-[0_6px_20px_rgba(16,185,129,0.08)]
+      relative overflow-hidden
+      before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-transparent before:via-white/30 before:to-transparent before:opacity-0 before:transition-opacity before:duration-300
+      hover:before:opacity-100"
                                     >
+                                      {/* Rest of the college display content remains the same */}
                                       <div className="flex items-center justify-between">
                                         <div className="flex-1 min-w-0">
                                           <div className="text-sm font-semibold text-gray-800 group-hover/college:text-emerald-600 transition-colors duration-200 truncate mb-1">
@@ -289,8 +346,8 @@ const Navbar = () => {
                                             </span>
                                             <span
                                               className="text-xs font-semibold text-emerald-700 bg-gradient-to-br from-emerald-50/90 to-emerald-100/70 px-2 py-1 rounded-full whitespace-nowrap
-                              shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_8px_rgba(16,185,129,0.1)]
-                              backdrop-blur-sm border border-emerald-100/50"
+            shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_8px_rgba(16,185,129,0.1)]
+            backdrop-blur-sm border border-emerald-100/50"
                                             >
                                               ⭐ {college.rating}
                                             </span>
@@ -298,8 +355,8 @@ const Navbar = () => {
                                         </div>
                                         <div
                                           className="text-sm font-semibold text-gray-700 bg-gradient-to-br from-gray-50/90 to-gray-100/70 px-3 py-1.5 rounded-full ml-3 whitespace-nowrap
-                          shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_8px_rgba(0,0,0,0.05)]
-                          backdrop-blur-sm border border-gray-100/50"
+        shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_8px_rgba(0,0,0,0.05)]
+        backdrop-blur-sm border border-gray-100/50"
                                         >
                                           {college.fees}
                                         </div>
