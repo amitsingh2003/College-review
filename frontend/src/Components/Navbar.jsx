@@ -26,8 +26,25 @@ const Navbar = () => {
   const [discoverDropdown, setDiscoverDropdown] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchFocused, setSearchFocused] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const navigate = useNavigate();
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/colleges/${encodeURIComponent(searchQuery.trim())}`);
+      setSearchQuery("");
+
+      setSearchFocused(false);
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleSearch(e);
+    }
+  };
   const handleCollegeClick = (collegeName) => {
     const college = collegeData.find(
       (college) => college.name.toLowerCase() === collegeName.toLowerCase()
@@ -200,12 +217,12 @@ const Navbar = () => {
         >
           <div className="px-4 lg:px-6">
             <div className="flex items-center justify-between h-12 lg:h-14">
-              <div className="flex items-center flex-shrink-0 group">
-                <div className="flex items-center space-x-2 lg:space-x-3">
+              <div className="flex items-center flex-shrink-0">
+                <div className="flex items-center space-x-3">
                   <img
-                    src={logo} // Use the imported logo variable
+                    src={logo}
                     alt="SCS Global Logo"
-                    className="h-6 w-auto sm:h-8 lg:h-10 transition-all duration-500"
+                    className="h-8 w-auto"
                     onError={(e) => {
                       console.log("Logo failed to load");
                       e.target.style.display = "none";
@@ -213,7 +230,7 @@ const Navbar = () => {
                   />
                   <Link
                     to="/"
-                    className={`text-sm sm:text-lg lg:text-xl font-extrabold transition-all duration-500 ${
+                    className={`text-lg font-extrabold ${
                       isScrolled ? "text-blue-500" : "text-white"
                     }`}
                   >
@@ -221,7 +238,6 @@ const Navbar = () => {
                   </Link>
                 </div>
               </div>
-
               {/* Desktop Navigation */}
               <div className="hidden lg:flex items-center space-x-6 flex-1 justify-center">
                 {/* Explore Dropdown */}
@@ -462,33 +478,38 @@ const Navbar = () => {
 
                 {/* Search Bar - Only neomorphism element inside navbar */}
                 <div className="flex-1 max-w-sm">
-                  <div className="relative">
-                    <Search
-                      className={`absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 transition-all duration-300 ${
-                        searchFocused
-                          ? "text-blue-500 scale-110"
-                          : isScrolled
-                          ? "text-blue-700"
-                          : "text-blue-500"
-                      }`}
-                    />
-                    <input
-                      type="text"
-                      placeholder="Search colleges, exams, courses..."
-                      onFocus={() => setSearchFocused(true)}
-                      onBlur={() => setSearchFocused(false)}
-                      className={`w-full pl-10 pr-4 py-2.5 text-sm rounded-full outline-none transition-all duration-300
-                        backdrop-blur-xl placeholder:text-xs
-                        shadow-[inset_0_2px_4px_rgba(0,0,0,0.1),inset_0_-1px_2px_rgba(255,255,255,0.2)]
-                        hover:shadow-[inset_0_2px_6px_rgba(0,0,0,0.15),inset_0_-1px_2px_rgba(255,255,255,0.3)] 
-                        focus:shadow-[inset_0_3px_8px_rgba(0,0,0,0.2),inset_0_-1px_2px_rgba(255,255,255,0.4)] 
-                        focus:scale-[1.02] ${
-                          isScrolled
-                            ? "bg-white/40 text-gray-900 placeholder-gray-500"
-                            : "bg-white/10 text-white placeholder-white/60"
+                  <form onSubmit={handleSearch}>
+                    <div className="relative">
+                      <Search
+                        className={`absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 transition-all duration-300 ${
+                          searchFocused
+                            ? "text-blue-500 scale-110"
+                            : isScrolled
+                            ? "text-blue-700"
+                            : "text-blue-500"
                         }`}
-                    />
-                  </div>
+                      />
+                      <input
+                        type="text"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        onKeyPress={handleKeyPress}
+                        placeholder="Search colleges, exams, courses..."
+                        onFocus={() => setSearchFocused(true)}
+                        onBlur={() => setSearchFocused(false)}
+                        className={`w-full pl-10 pr-4 py-2.5 text-sm rounded-full outline-none transition-all duration-300
+          backdrop-blur-xl placeholder:text-xs
+          shadow-[inset_0_2px_4px_rgba(0,0,0,0.1),inset_0_-1px_2px_rgba(255,255,255,0.2)]
+          hover:shadow-[inset_0_2px_6px_rgba(0,0,0,0.15),inset_0_-1px_2px_rgba(255,255,255,0.3)] 
+          focus:shadow-[inset_0_3px_8px_rgba(0,0,0,0.2),inset_0_-1px_2px_rgba(255,255,255,0.4)] 
+          focus:scale-[1.02] ${
+            isScrolled
+              ? "bg-white/40 text-gray-900 placeholder-gray-500"
+              : "bg-white/10 text-white placeholder-white/60"
+          }`}
+                      />
+                    </div>
+                  </form>
                 </div>
 
                 {/* Discover Dropdown */}
@@ -633,23 +654,28 @@ const Navbar = () => {
 
           {/* Mobile Search Bar */}
           <div className="lg:hidden px-4 pb-3">
-            <div className="relative">
-              <Search
-                className={`absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 transition-all duration-300 ${
-                  searchFocused ? "text-blue-500 scale-110" : "text-gray-400"
-                }`}
-              />
-              <input
-                type="text"
-                placeholder="Search colleges, exams..."
-                onFocus={() => setSearchFocused(true)}
-                onBlur={() => setSearchFocused(false)}
-                className="w-full pl-10 pr-4 py-2.5 text-sm bg-white/30 backdrop-blur-xl rounded-full border border-white/20 
-                  focus:outline-none focus:ring-1 focus:ring-blue-400/30 placeholder:text-xs placeholder-gray-500 transition-all duration-500 
-                  shadow-[inset_0_2px_4px_rgba(0,0,0,0.1),inset_0_-1px_2px_rgba(255,255,255,0.2)] 
-                  focus:shadow-[inset_0_3px_8px_rgba(0,0,0,0.2)] focus:scale-[1.02]"
-              />
-            </div>
+            <form onSubmit={handleSearch}>
+              <div className="relative">
+                <Search
+                  className={`absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 transition-all duration-300 ${
+                    searchFocused ? "text-blue-500 scale-110" : "text-gray-400"
+                  }`}
+                />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  placeholder="Search colleges, exams..."
+                  onFocus={() => setSearchFocused(true)}
+                  onBlur={() => setSearchFocused(false)}
+                  className="w-full pl-10 pr-4 py-2.5 text-sm bg-white/30 backdrop-blur-xl rounded-full border border-white/20 
+          focus:outline-none focus:ring-1 focus:ring-blue-400/30 placeholder:text-xs placeholder-gray-500 transition-all duration-500 
+          shadow-[inset_0_2px_4px_rgba(0,0,0,0.1),inset_0_-1px_2px_rgba(255,255,255,0.2)] 
+          focus:shadow-[inset_0_3px_8px_rgba(0,0,0,0.2)] focus:scale-[1.02]"
+                />
+              </div>
+            </form>
           </div>
         </div>
       </header>

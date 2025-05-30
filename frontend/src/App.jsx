@@ -14,6 +14,7 @@ import CollegeDetails from './Components/CollegeDetails';
 const HomePage = () => {
   return (
     <>
+    <Navbar></Navbar>
       <Home />
       <Notifications />
       <StreamsDegreeExplorer />
@@ -27,7 +28,7 @@ const HomePage = () => {
 function App() {
   return (
     <Router>
-      <Navbar />
+     
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/college/:slug" element={<NavColleges />} />

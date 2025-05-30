@@ -17,12 +17,25 @@ import {
   Send,
   Heart,
 } from "lucide-react";
-import logo from "../assets/logo.png"; 
+import logo from "../assets/logo.png";
+import { useNavigate } from "react-router-dom";
+import collegeData from "../assets/College.json";
 
 const NeomorphicFooter = () => {
+  const navigate = useNavigate();
   const [hoveredStat, setHoveredStat] = useState(null);
   const [hoveredSocial, setHoveredSocial] = useState(null);
   const [email, setEmail] = useState("");
+
+  const handleCollegeClick = (collegeName) => {
+    const college = collegeData.find(
+      (college) => college.name.toLowerCase() === collegeName.toLowerCase()
+    );
+    if (college) {
+      const collegeSlug = college.name.toLowerCase().replace(/\s+/g, "-");
+      navigate(`/college/${collegeSlug}`, { state: { collegeData: college } });
+    }
+  };
 
   const footerData = {
     "Top Colleges": [
@@ -187,15 +200,35 @@ const NeomorphicFooter = () => {
                       <ul className="space-y-2">
                         {links.map((link, index) => (
                           <li key={index}>
-                            <a
-                              href="#"
-                              className="text-gray-600 hover:text-blue-600 transition-all duration-300 flex items-center group text-sm lg:text-base font-medium"
-                            >
-                              <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all duration-300 mr-2 transform -translate-x-2 group-hover:translate-x-0 text-blue-600" />
-                              <span className="group-hover:translate-x-1 transition-transform duration-300 group-hover:font-semibold">
-                                {link}
-                              </span>
-                            </a>
+                            {category === "Top Colleges" ? (
+                              // Clickable college links with dynamic routing
+                              <button
+                                onClick={() => {
+                                  handleCollegeClick(link);
+                                  window.scrollTo({
+                                    top: 0,
+                                    behavior: "smooth",
+                                  });
+                                }}
+                                className="text-gray-600 hover:text-blue-600 transition-all duration-300 flex items-center group text-sm lg:text-base font-medium w-full text-left"
+                              >
+                                <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all duration-300 mr-2 transform -translate-x-2 group-hover:translate-x-0 text-blue-600" />
+                                <span className="group-hover:translate-x-1 transition-transform duration-300 group-hover:font-semibold">
+                                  {link}
+                                </span>
+                              </button>
+                            ) : (
+                              // Regular anchor links for other categories
+                              <a
+                                href="#"
+                                className="text-gray-600 hover:text-blue-600 transition-all duration-300 flex items-center group text-sm lg:text-base font-medium"
+                              >
+                                <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all duration-300 mr-2 transform -translate-x-2 group-hover:translate-x-0 text-blue-600" />
+                                <span className="group-hover:translate-x-1 transition-transform duration-300 group-hover:font-semibold">
+                                  {link}
+                                </span>
+                              </a>
+                            )}
                           </li>
                         ))}
                       </ul>

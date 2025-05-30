@@ -20,6 +20,7 @@ import {
 import { useLocation, useParams } from "react-router-dom";
 
 import collegeData from "../assets/College.json";
+import Navbar from "./Navbar";
 
 const NavColleges = () => {
   // Sample data structure based on your JSON
@@ -268,9 +269,11 @@ const NavColleges = () => {
   );
 
   return (
+    <>
+    <Navbar></Navbar>
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 pt-26 pb-12">
+      <div className="relative overflow-hidden bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 pt-30 pb-12">
         {/* Subtle overlay */}
         <div className="absolute inset-0 bg-black/10 backdrop-blur-sm"></div>
 
@@ -290,7 +293,7 @@ const NavColleges = () => {
                     }}
                   />
                   {/* Fallback if logo fails */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-xl flex items-center justify-center hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-xl  items-center justify-center hidden">
                     <GraduationCap className="w-10 h-10 text-white" />
                   </div>
                 </div>
@@ -322,7 +325,7 @@ const NavColleges = () => {
                 <div
                   className="flex items-center gap-2 px-4 py-2 rounded-full 
     bg-white/10 backdrop-blur-md 
-    shadow-[inset_2px_2px_4px_rgba(255,255,255,0.2),inset_-2px_-2px_4px_rgba(0,0,0,0.1),0_4px_12px_rgba(0,0,0,0.15)] 
+    shadow-[inset_2px_2px_4px_  rgba(255,255,255,0.2),inset_-2px_-2px_4px_rgba(0,0,0,0.1),0_4px_12px_rgba(0,0,0,0.15)] 
     hover:shadow-[0_6px_16px_rgba(0,0,0,0.2)] 
     transition-all duration-300 ease-in-out
     text-white/90
@@ -640,6 +643,7 @@ const NavColleges = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

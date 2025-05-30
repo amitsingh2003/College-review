@@ -126,7 +126,7 @@ const Home = () => {
               : "opacity-0 scale-110 z-0"
           }`}
           style={{
-            backgroundColor: "#000", // fallback background
+            backgroundColor: "#000",
             backgroundImage: `url(${image})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -140,7 +140,6 @@ const Home = () => {
             willChange: "transform, opacity, filter",
           }}
         >
-          {/* Gradient overlay */}
           <div
             className="absolute inset-0 w-full h-full transition-all duration-[2500ms] ease-in-out"
             style={{
@@ -152,7 +151,6 @@ const Home = () => {
             }}
           />
 
-          {/* Radial darkening overlay */}
           <div
             className="absolute inset-0 w-full h-full transition-opacity duration-[2000ms] ease-out"
             style={{
@@ -165,28 +163,28 @@ const Home = () => {
       ))}
 
       <div className="text-center px-6 max-w-6xl relative z-10">
-        <div className="mb-8">
-          <h1 className="text-center text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
-            <div className="text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] mb-2">
-              Search & Explore
-            </div>
-
-            {/* Adjusted height to reduce vertical space */}
-            <div className="relative overflow-hidden h-10 md:h-12 lg:h-14 flex items-center justify-center">
-              <div
-                className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ease-out transform ${
-                  isVisible
-                    ? "opacity-100 translate-y-0 scale-100"
-                    : "opacity-0 translate-y-4 scale-95"
-                }`}
-              >
-                <span className="bg-gradient-to-r from-white via-white to-white bg-clip-text text-transparent font-extrabold drop-shadow-lg text-center text-lg md:text-xl lg:text-4xl">
-                  {animatedTexts[currentTextIndex]}
-                </span>
-              </div>
-            </div>
-          </h1>
-        </div>
+       <div className="mb-8 mt-20 sm:mt-24 lg:mt-8">
+  <h1 className="text-center font-extrabold leading-tight">
+    <div className="text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] mb-2 text-2xl sm:text-3xl md:text-6xl lg:text-7xl">
+      Search & Explore
+    </div>
+    
+    {/* Adjusted height for different screen sizes */}
+    <div className="relative overflow-hidden h-8 sm:h-10 md:h-12 lg:h-14 flex items-center justify-center">
+      <div
+        className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ease-out transform ${
+          isVisible
+            ? "opacity-100 translate-y-0 scale-100"
+            : "opacity-0 translate-y-4 scale-95"
+        }`}
+      >
+        <span className="bg-gradient-to-r from-white via-white to-white bg-clip-text text-transparent font-extrabold drop-shadow-lg text-center text-base sm:text-lg md:text-xl lg:text-4xl">
+          {animatedTexts[currentTextIndex]}
+        </span>
+      </div>
+    </div>
+  </h1>
+</div>
 
         {/* Neomorphic Search Bar (Wider & Taller) */}
         <div className="mb-12 max-w-2xl mx-auto">
